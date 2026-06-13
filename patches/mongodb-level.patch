@@ -1,0 +1,13 @@
+diff --git a/dist/index.js b/dist/index.js
+index c6755c21af62ad37e68324d0c89a6b40adac2c47..4da976db96f4d7e82bfb19fdd5fbdf27b52de1cb 100644
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -128,7 +128,7 @@
+         await this.collection.updateOne(
+           { key },
+           { $set: { value } },
+-          { upsert: true, hint: "key_1" }
++          { upsert: true }
+         );
+       } catch (e) {
+         return callback(new ModuleError(e.message));

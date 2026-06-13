@@ -5,11 +5,11 @@
   "scripts": {
     "predev": "node scripts/check-pagefind.js",
     "dev": "tinacms dev -c \"next dev --turbopack\"",
-    "build": "echo 'Starting TinaCMS build...' && tinacms build && echo 'TinaCMS build completed. Starting Next.js build...' && next build",
+    "build": "echo 'Starting TinaCMS build...' && tinacms build --skip-indexing && echo 'TinaCMS build completed. Starting Next.js build...' && next build",
     "postbuild": "npx pagefind --site .next --output-path .next/static/pagefind && next-sitemap",
-    "build-local-pagefind": "tinacms build && next build && npx pagefind --site .next --output-subdir ../public/pagefind",
-    "export": "tinacms build && EXPORT_MODE=static,UNOPTIMIZED_IMAGES=true next build",
-    "start": "tinacms build && next start",
+    "build-local-pagefind": "tinacms build --skip-indexing && next build && npx pagefind --site .next --output-subdir ../public/pagefind",
+    "export": "tinacms build --skip-indexing && EXPORT_MODE=static,UNOPTIMIZED_IMAGES=true next build",
+    "start": "tinacms build --skip-indexing && next start",
     "lint": "biome check src/ tina/",
     "lint:fix": "biome check src/ tina/ --fix",
     "cleanup": "node scripts/cleanup.js",
@@ -17,20 +17,25 @@
     "test:ui": "playwright test --ui"
   },
   "dependencies": {
+    "@azure/storage-blob": "^12.32.0",
     "@heroicons/react": "^2.2.0",
     "@monaco-editor/react": "^4.7.0",
     "@next/third-parties": "^16.1.1",
     "@radix-ui/react-dropdown-menu": "^2.1.15",
     "@radix-ui/react-tabs": "^1.1.12",
+    "@tinacms/datalayer": "^2.0.23",
     "copy-to-clipboard": "^3.3.3",
     "date-fns": "^4.1.0",
     "fast-glob": "^3.3.3",
+    "formidable": "^3.5.4",
     "html-to-md": "^0.8.8",
     "lodash": "^4.17.21",
     "mermaid": "^11.6.0",
     "monaco-editor": "^0.52.2",
+    "mongodb-level": "^0.0.4",
     "motion": "^12.15.0",
     "next": "^15.4.10",
+    "next-auth": "^4.24.14",
     "next-themes": "^0.4.6",
     "prism-react-renderer": "^2.4.1",
     "prismjs": "^1.30.0",
@@ -43,6 +48,7 @@
     "rehype-pretty-code": "^0.14.1",
     "shiki": "^3.6.0",
     "tinacms": "^3.9.1",
+    "tinacms-authjs": "^23.0.1",
     "title-case": "^4.3.2",
     "typescript": "5.8.3"
   },
@@ -53,6 +59,7 @@
     "@svgr/webpack": "^8.1.0",
     "@tailwindcss/postcss": "^4.1.8",
     "@tinacms/cli": "^2.1.5",
+    "@types/formidable": "^3.5.1",
     "@types/node": "^24.2.1",
     "autoprefixer": "^10.4.21",
     "monaco-editor-webpack-plugin": "^7.1.0",
@@ -62,6 +69,11 @@
     "postcss-preset-env": "^10.2.0",
     "tailwindcss": "^4.1.8",
     "worker-loader": "^3.0.8"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "mongodb-level@0.0.4": "patches/mongodb-level.patch"
+    }
   },
   "packageManager": "pnpm@9.15.2"
 }
