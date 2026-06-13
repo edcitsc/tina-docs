@@ -1,30 +1,33 @@
-import { defineConfig } from "tinacms";
+import { defineConfig, LocalAuthProvider } from "tinacms";
+import { DefaultAuthJSProvider } from "tinacms-authjs/dist/tinacms";
 import { schema } from "./schema";
 
+// Auth toggle: when true, runs unauthenticated (local dev mode).
+const isLocalAuth =
+  (process.env.TINA_PUBLIC_USE_LOCAL_AUTH ?? process.env.TINA_PUBLIC_IS_LOCAL ?? "true") === "true";
+
 export const config = defineConfig({
+  contentApiUrlOverride: "/api/tina/gql",
+  authProvider: isLocalAuth
+    ? new LocalAuthProvider()
+    : new DefaultAuthJSProvider({ name: "Microsoft Entra ID" }),
   schema,
-  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
-  branch:
-    process.env.NEXT_PUBLIC_TINA_BRANCH || // custom branch env override
-    process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF || // Vercel branch env
-    process.env.HEAD, // Netlify branch env
-  token: process.env.TINA_TOKEN,
+  branch: process.env.NEXT_PUBLIC_TINA_BRANCH || process.env.ADO_BRANCH || "main",
+  // clientId / token are unused in self-hosted mode but the type requires them.
+  clientId: null,
+  token: null,
+  // Custom media store backed by Azure Blob Storage. Dynamic import keeps the
+  // Azure SDK out of the admin bundle — Tina only loads it when the Media
+  // Manager screen actually mounts.
   media: {
-    // If you wanted cloudinary do this
-    // loadCustomStore: async () => {
-    //   const pack = await import("next-tinacms-cloudinary");
-    //   return pack.TinaCloudCloudinaryMediaStore;
-    // },
-    // this is the config for the tina cloud media store
-    tina: {
-      publicFolder: "public",
-      mediaRoot: "",
+    loadCustomStore: async () => {
+      const mod = await import("./media/azure-blob-media-store");
+      return mod.AzureBlobMediaStore;
     },
-    accept: ["image/*", "video/*", "application/json", ".json"],
   },
   build: {
-    publicFolder: "public", // The public asset folder for your framework
-    outputFolder: "admin", // within the public folder
+    publicFolder: "public",
+    outputFolder: "admin",
     basePath: process.env.TINA_BASE_PATH || "",
   },
 });
