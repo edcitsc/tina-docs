@@ -10,6 +10,7 @@
     "build-local-pagefind": "tinacms build --skip-indexing && next build && npx pagefind --site .next --output-subdir ../public/pagefind",
     "export": "tinacms build --skip-indexing && EXPORT_MODE=static,UNOPTIMIZED_IMAGES=true next build",
     "start": "tinacms build --skip-indexing && next start",
+    "build:index": "node scripts/build-index.js",
     "lint": "biome check src/ tina/",
     "lint:fix": "biome check src/ tina/ --fix",
     "cleanup": "node scripts/cleanup.js",
