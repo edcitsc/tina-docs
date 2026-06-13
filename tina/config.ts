@@ -6,8 +6,11 @@ import { schema } from "./schema";
 const isLocalAuth =
   (process.env.TINA_PUBLIC_USE_LOCAL_AUTH ?? process.env.TINA_PUBLIC_IS_LOCAL ?? "true") === "true";
 
+// The generated client needs an absolute URL for server-side fetches.
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
 export const config = defineConfig({
-  contentApiUrlOverride: "/api/tina/gql",
+  contentApiUrlOverride: `${siteUrl}/api/tina/gql`,
   authProvider: isLocalAuth
     ? new LocalAuthProvider()
     : new DefaultAuthJSProvider({ name: "Microsoft Entra ID" }),
