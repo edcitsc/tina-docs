@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "predev": "node scripts/check-pagefind.js",
-    "dev": "tinacms build --skip-indexing --no-client-build-cache && next dev --turbopack",
+    "dev": "tinacms dev -c \"next dev --turbopack\"",
     "build": "echo 'Starting TinaCMS build...' && tinacms build --skip-indexing && echo 'TinaCMS build completed. Starting Next.js build...' && next build",
     "postbuild": "npx pagefind --site .next --output-path .next/static/pagefind && next-sitemap",
     "build-local-pagefind": "cross-env TINA_LOCAL_URL=http://localhost:4001/graphql NODE_ENV=production tinacms build --local --skip-indexing -c \"npx next build && npx pagefind --site .next --output-subdir ../public/pagefind\"",
