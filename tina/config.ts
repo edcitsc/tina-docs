@@ -8,10 +8,12 @@ const isLocalAuth =
   (process.env.TINA_PUBLIC_USE_LOCAL_AUTH ?? process.env.TINA_PUBLIC_IS_LOCAL ?? "true") === "true";
 
 // The generated client needs an absolute URL for server-side fetches.
+// Skip the override when TINA_LOCAL_URL is set (local pagefind build uses port 4001 directly).
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+const contentApiUrl = process.env.TINA_LOCAL_URL || `${siteUrl}/api/tina/gql`;
 
 export const config = defineConfig({
-  contentApiUrlOverride: `${siteUrl}/api/tina/gql`,
+  contentApiUrlOverride: contentApiUrl,
   authProvider: isLocalAuth
     ? new LocalAuthProvider()
     : new DefaultAuthJSProvider({ name: "Microsoft Entra ID" }),

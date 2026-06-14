@@ -8,11 +8,9 @@
  * Also supports POST for index invalidation (called after content saves).
  */
 import { type NextRequest, NextResponse } from "next/server";
-import {
-  getSearchIndexStats,
-  invalidateSearchIndex,
-  querySearchIndex,
-} from "@/lib/search-index";
+import { getSearchIndexStats, invalidateSearchIndex, querySearchIndex } from "@/lib/search-index";
+
+export const dynamic = "force-dynamic";
 
 function getSiteUrl(request: NextRequest): string {
   // Use the request origin as the site URL for internal GQL calls
@@ -73,10 +71,7 @@ export async function GET(request: NextRequest) {
         RESULT_LENGTH: result.total,
       });
     } catch {
-      return NextResponse.json(
-        { error: "Invalid query format" },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: "Invalid query format" }, { status: 400 });
     }
   }
 

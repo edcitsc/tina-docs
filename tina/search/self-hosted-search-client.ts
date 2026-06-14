@@ -26,7 +26,7 @@ export class SelfHostedSearchClient {
       collection?: string;
       limit?: number;
       cursor?: string;
-    }
+    },
   ) {
     const params = new URLSearchParams({ query });
     if (options?.collection) params.set("collection", options.collection);

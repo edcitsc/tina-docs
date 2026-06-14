@@ -182,7 +182,7 @@ export function invalidateSearchIndex(): void {
 export async function querySearchIndex(
   siteUrl: string,
   query: string,
-  options?: { collection?: string; limit?: number; cursor?: string }
+  options?: { collection?: string; limit?: number; cursor?: string },
 ): Promise<SearchQueryResult> {
   const index = await getSearchIndex(siteUrl);
   const limit = options?.limit ?? 20;
