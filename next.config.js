@@ -24,6 +24,8 @@ if (isStatic) {
   extraConfig.output = "export";
   extraConfig.trailingSlash = true;
   extraConfig.skipTrailingSlashRedirect = true;
+} else if (process.env.STANDALONE_OUTPUT === "true") {
+  extraConfig.output = "standalone";
 }
 
 module.exports = {

@@ -1,6 +1,7 @@
 import { defineConfig, LocalAuthProvider } from "tinacms";
 import { DefaultAuthJSProvider } from "tinacms-authjs/dist/tinacms";
 import { schema } from "./schema";
+import { SelfHostedSearchClient } from "./search/self-hosted-search-client";
 
 // Auth toggle: when true, runs unauthenticated (local dev mode).
 const isLocalAuth =
@@ -32,6 +33,9 @@ export const config = defineConfig({
     publicFolder: "public",
     outputFolder: "admin",
     basePath: process.env.TINA_BASE_PATH || "",
+  },
+  search: {
+    searchClient: new SelfHostedSearchClient() as any,
   },
 });
 

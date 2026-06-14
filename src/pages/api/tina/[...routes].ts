@@ -4,6 +4,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { AuthJsBackendAuthProvider } from "tinacms-authjs";
 import databaseClient from "../../../../tina/__generated__/databaseClient";
 import { buildAuthOptions } from "../../../../tina/auth";
+import { invalidateSearchIndex } from "@/lib/search-index";
 
 const isLocalAuth =
   (process.env.TINA_PUBLIC_USE_LOCAL_AUTH ?? process.env.TINA_PUBLIC_IS_LOCAL ?? "true") === "true";
@@ -51,5 +52,13 @@ const handler = TinaNodeBackend({
 });
 
 export default function tinaHandler(req: NextApiRequest, res: NextApiResponse) {
+  // Invalidate the search index on any mutation so results stay fresh.
+  const body = req.body;
+  const isMutation =
+    typeof body?.query === "string" && body.query.trimStart().startsWith("mutation");
+  if (isMutation) {
+    invalidateSearchIndex();
+  }
+
   return handler(req, res);
 }
