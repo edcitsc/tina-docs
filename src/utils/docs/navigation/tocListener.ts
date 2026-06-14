@@ -17,18 +17,14 @@ interface Heading {
  * @param contentRef - Reference to the content container element
  * @returns Array of heading objects with id, offset, and level properties
  */
-function createHeadings(
-  contentRef: RefObject<HTMLDivElement | null>
-): Heading[] {
+function createHeadings(contentRef: RefObject<HTMLDivElement | null>): Heading[] {
   const headings: Heading[] = [];
-  const htmlElements = contentRef.current?.querySelectorAll(
-    "h1, h2, h3, h4, h5, h6"
-  );
+  const htmlElements = contentRef.current?.querySelectorAll("h1, h2, h3, h4, h5, h6");
 
   for (const heading of htmlElements ?? []) {
     headings.push({
       id: heading.id,
-      offset: heading.offsetTop,
+      offset: (heading as HTMLElement).offsetTop,
       level: heading.tagName,
     });
   }
@@ -44,7 +40,7 @@ function createHeadings(
  */
 export function createTocListener(
   contentRef: RefObject<HTMLDivElement | null>,
-  setActiveIds: (activeIds: string[]) => void
+  setActiveIds: (activeIds: string[]) => void,
 ): () => void {
   const headings = createHeadings(contentRef);
 
@@ -54,8 +50,7 @@ export function createTocListener(
     const activeIds: string[] = [];
 
     // If we're near the bottom of the page, include the last headings
-    const isNearBottom =
-      window.scrollY + window.innerHeight >= documentHeight - 50;
+    const isNearBottom = window.scrollY + window.innerHeight >= documentHeight - 50;
 
     for (const heading of headings) {
       if (heading.offset && (scrollPos >= heading.offset || isNearBottom)) {

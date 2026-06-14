@@ -55,7 +55,7 @@ export interface FileTreeItemProps {
   onMove: (
     draggedId: string,
     targetId: string | null,
-    position: "before" | "after" | "inside"
+    position: "before" | "after" | "inside",
   ) => void;
 }
 
@@ -121,10 +121,7 @@ export const FileTreeItem = ({
 
   const handleDragEnd = () => setDragState(DRAG_STATE_RESET);
 
-  const getDropPosition = (
-    e: DragEvent,
-    rect: DOMRect
-  ): "before" | "after" | "inside" => {
+  const getDropPosition = (e: DragEvent, rect: DOMRect): "before" | "after" | "inside" => {
     const relativeY = (e.clientY - rect.top) / rect.height;
 
     if (node.type === "folder") {
@@ -220,9 +217,7 @@ export const FileTreeItem = ({
           </button>
         )}
 
-        {(node.type === "file" || !hasChildren) && (
-          <div className="w-4 flex-shrink-0" />
-        )}
+        {(node.type === "file" || !hasChildren) && <div className="w-4 flex-shrink-0" />}
 
         {/* File/Folder Icon */}
         <div className="flex-shrink-0">
@@ -278,7 +273,6 @@ export const FileTreeItem = ({
         isExpanded &&
         node.children.map((child) => (
           <FileTreeItem
-            // @ts-expect-error - key is not a prop of FileTreeItemProps, false positive
             key={child.id}
             node={child}
             editState={{ editingId, setEditingId }}

@@ -9,11 +9,7 @@ interface BreadcrumbItem {
   url?: string;
 }
 
-export const BreadCrumbs = ({
-  navigationDocsData,
-}: {
-  navigationDocsData: any;
-}) => {
+export const BreadCrumbs = ({ navigationDocsData }: { navigationDocsData: any }) => {
   // Helper function to extract a clean URL path from a slug object
   const getUrlFromSlug = (slug: any): string => {
     if (typeof slug === "string") {
@@ -61,10 +57,7 @@ export const BreadCrumbs = ({
   };
 
   // Recursive function to search through nested items and return breadcrumb items
-  const searchInItems = (
-    items: any[],
-    currentPath: string
-  ): BreadcrumbItem[] => {
+  const searchInItems = (items: any[], currentPath: string): BreadcrumbItem[] => {
     if (!Array.isArray(items) || !currentPath) return [];
 
     for (const item of items) {
@@ -108,10 +101,7 @@ export const BreadCrumbs = ({
   };
 
   // Function to find the breadcrumb trail for the current page
-  const findBreadcrumbTrail = (
-    navigationData: any,
-    currentPath: string
-  ): BreadcrumbItem[] => {
+  const findBreadcrumbTrail = (navigationData: any, currentPath: string): BreadcrumbItem[] => {
     const trail: BreadcrumbItem[] = [];
 
     if (!navigationData || !currentPath) {
@@ -133,11 +123,7 @@ export const BreadCrumbs = ({
 
       // Search through supermenu groups in this tab
       for (const supermenuGroup of tab.items) {
-        if (
-          !supermenuGroup ||
-          !supermenuGroup.items ||
-          !Array.isArray(supermenuGroup.items)
-        ) {
+        if (!supermenuGroup || !supermenuGroup.items || !Array.isArray(supermenuGroup.items)) {
           continue;
         }
 
@@ -165,9 +151,13 @@ export const BreadCrumbs = ({
 
   const currentPath = usePathname();
 
+  if (!navigationDocsData || !currentPath) {
+    return null;
+  }
+
   const breadcrumbs = findBreadcrumbTrail(navigationDocsData, currentPath);
 
-  if (!navigationDocsData || breadcrumbs.length === 0) {
+  if (breadcrumbs.length === 0) {
     return null;
   }
 
@@ -196,9 +186,7 @@ export const BreadCrumbs = ({
               ) : (
                 <span
                   className={`text-sm uppercase tracking-wide ${
-                    isLast
-                      ? "font-medium text-neutral-text"
-                      : "text-neutral-text-secondary"
+                    isLast ? "font-medium text-neutral-text" : "text-neutral-text-secondary"
                   }`}
                 >
                   {crumb.title}

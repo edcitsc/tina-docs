@@ -11,11 +11,11 @@ export default function HeaderFormat({
 }) {
   const HeadingTag = `h${level}` as any;
   const id = formatHeaderId(
-    React.isValidElement(children) && children.props?.content
-      ? children.props.content.map((content: any) => content.text).join("")
+    React.isValidElement(children) && (children as any).props?.content
+      ? (children as any).props.content.map((content: any) => content.text).join("")
       : typeof children === "string"
-        ? children
-        : ""
+      ? children
+      : "",
   );
   const linkHref = `#${id}`;
 
@@ -46,8 +46,7 @@ export default function HeaderFormat({
     const element = document.getElementById(elementId);
     if (element) {
       const offset = 130; //offset in pixels
-      const elementPosition =
-        element.getBoundingClientRect().top + window.scrollY;
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - offset;
 
       window.scrollTo({
@@ -66,15 +65,8 @@ export default function HeaderFormat({
   }, [scrollToElement]);
 
   return (
-    <HeadingTag
-      id={id}
-      className={`${styles[level]} group relative cursor-pointer`}
-    >
-      <a
-        href={linkHref}
-        className="inline-block no-underline"
-        onClick={handleHeaderClick}
-      >
+    <HeadingTag id={id} className={`${styles[level]} group relative cursor-pointer`}>
+      <a href={linkHref} className="inline-block no-underline" onClick={handleHeaderClick}>
         {" "}
         {children}
         <LinkIcon

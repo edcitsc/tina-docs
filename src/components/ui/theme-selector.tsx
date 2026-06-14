@@ -22,26 +22,20 @@ export const ThemeSelector = () => {
   const [showTooltip, setShowTooltip] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const tooltipRef = useRef<HTMLDivElement>(null);
-  const [selectedTheme, setSelectedTheme] = useState(() => {
+  const [selectedTheme, setSelectedTheme] = useState<string>(() => {
     if (typeof window !== "undefined") {
-      return sessionStorage.getItem(BROWSER_TAB_THEME_KEY) || theme;
+      return sessionStorage.getItem(BROWSER_TAB_THEME_KEY) || theme || "default";
     }
-    return theme;
+    return theme || "default";
   });
 
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
-      ) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
-      if (
-        tooltipRef.current &&
-        !tooltipRef.current.contains(event.target as Node)
-      ) {
+      if (tooltipRef.current && !tooltipRef.current.contains(event.target as Node)) {
         setShowTooltip(false);
       }
     };
@@ -61,16 +55,14 @@ export const ThemeSelector = () => {
       // If theme is not in our list, it means it's a dark/light mode change
       setSelectedTheme(selectedTheme);
     } else {
-      setSelectedTheme(theme);
+      setSelectedTheme(theme || "default");
     }
   }, [theme, selectedTheme]);
 
   useEffect(() => {
     if (mounted && selectedTheme) {
       const isDark = resolvedTheme === "dark";
-      document.documentElement.className = `theme-${selectedTheme}${
-        isDark ? " dark" : ""
-      }`;
+      document.documentElement.className = `theme-${selectedTheme}${isDark ? " dark" : ""}`;
       sessionStorage.setItem(BROWSER_TAB_THEME_KEY, selectedTheme);
     }
   }, [selectedTheme, resolvedTheme, mounted]);
@@ -135,13 +127,8 @@ export const ThemeSelector = () => {
                 } ${t === selectedTheme ? "bg-neutral-hover" : ""}`}
                 style={{
                   backgroundColor:
-                    t === "default"
-                      ? DEFAULT_COLORS.background
-                      : "var(--brand-primary-light)",
-                  color:
-                    t === "default"
-                      ? DEFAULT_COLORS.text
-                      : "var(--brand-primary)",
+                    t === "default" ? DEFAULT_COLORS.background : "var(--brand-primary-light)",
+                  color: t === "default" ? DEFAULT_COLORS.text : "var(--brand-primary)",
                   border:
                     t === "default"
                       ? `1px solid ${DEFAULT_COLORS.border}`
@@ -163,13 +150,12 @@ const Tooltip = ({ selectedTheme }: { selectedTheme: string }) => {
     <div className="absolute bottom-full right-0 mb-2 w-64 p-3 bg-neutral-surface border border-neutral-border rounded-lg shadow-lg text-xs text-neutral-text min-w-fit">
       <div className="font-medium mb-2">Theme Preview</div>
       <p className="mb-2">
-        Theme changes are temporary and will reset when you open a new browser
-        window or tab.
+        Theme changes are temporary and will reset when you open a new browser window or tab.
       </p>
       <p className="mb-2">
         To make theme changes permanent, update the{" "}
-        <code className="bg-neutral-hover px-1 rounded">Selected Theme</code>{" "}
-        field in your Settings through TinaCMS:
+        <code className="bg-neutral-hover px-1 rounded">Selected Theme</code> field in your Settings
+        through TinaCMS:
       </p>
       <code className="block bg-neutral-hover p-2 rounded text-xs font-mono">
         selectedTheme={selectedTheme}

@@ -123,9 +123,7 @@ const SchemaSelector = (props: any) => {
   const { input, field } = props;
   const [schemas, setSchemas] = useState<SchemaFile[]>([]);
   const [loading, setLoading] = useState(true);
-  const [schemaDetails, setSchemaDetails] = useState<SchemaDetails | null>(
-    null
-  );
+  const [schemaDetails, setSchemaDetails] = useState<SchemaDetails | null>(null);
   const [loadingDetails, setLoadingDetails] = useState(false);
   const [selectedEndpoint, setSelectedEndpoint] = useState<string>("");
 
@@ -145,11 +143,8 @@ const SchemaSelector = (props: any) => {
 
     const fetchSchemaDetails = async () => {
       setLoadingDetails(true);
-      const details = await getSchemaDetails(
-        input.value.split("|")[0],
-        schemas
-      );
-      setSchemaDetails(details);
+      const details = await getSchemaDetails(input.value.split("|")[0], schemas);
+      setSchemaDetails(details ?? null);
       setLoadingDetails(false);
     };
 
@@ -171,11 +166,8 @@ const SchemaSelector = (props: any) => {
     // Reset endpoint selection when schema changes
     if (!schemaDetails) {
       setLoadingDetails(true);
-      const details = await getSchemaDetails(
-        input.value.split("|")[0],
-        schemas
-      );
-      setSchemaDetails(details);
+      const details = await getSchemaDetails(input.value.split("|")[0], schemas);
+      setSchemaDetails(details ?? null);
       setLoadingDetails(false);
     }
     setSelectedEndpoint("");
@@ -201,9 +193,7 @@ const SchemaSelector = (props: any) => {
         {field.label || "Select API Schema"}
       </label>
       {loading ? (
-        <div className="py-2 px-3 bg-gray-100 rounded text-gray-500">
-          Loading schemas...
-        </div>
+        <div className="py-2 px-3 bg-gray-100 rounded text-gray-500">Loading schemas...</div>
       ) : schemas.length === 0 ? (
         <div className="max-w-full w-full py-2 px-3 bg-red-50 text-red-500 rounded whitespace-normal">
           No API schema files found. Please upload one in the Content Manager.
@@ -229,11 +219,7 @@ const SchemaSelector = (props: any) => {
               <div className="font-medium mb-1 truncate break-words whitespace-normal max-w-full">
                 Selected schema:{" "}
                 <span className="truncate break-words whitespace-normal max-w-full">
-                  {
-                    schemas.find(
-                      (s) => s.relativePath === input.value.split("|")[0]
-                    )?._sys.filename
-                  }
+                  {schemas.find((s) => s.relativePath === input.value.split("|")[0])?._sys.filename}
                 </span>
               </div>
 
@@ -296,9 +282,7 @@ const SchemaSelector = (props: any) => {
                   )}
                 </>
               ) : (
-                <div className="text-blue-500">
-                  Unable to load schema details
-                </div>
+                <div className="text-blue-500">Unable to load schema details</div>
               )}
             </div>
           )}
@@ -312,8 +296,8 @@ const SchemaSelector = (props: any) => {
 
       <div className="mt-4 p-3 bg-gray-50 text-gray-600 rounded-md text-sm break-words whitespace-normal max-w-full">
         <p>
-          <strong>Note:</strong> To add more schema files, go to the Content
-          Manager and add files to the API Schema collection.
+          <strong>Note:</strong> To add more schema files, go to the Content Manager and add files
+          to the API Schema collection.
         </p>
       </div>
     </div>

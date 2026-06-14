@@ -7,16 +7,13 @@ import { FaHistory } from "react-icons/fa";
 import { getRelativeTime } from "./timeUtils";
 import type { GitHubMetadataProps } from "./type";
 
-export default function GitHubMetadata({
-  className = "",
-}: Omit<GitHubMetadataProps, "path">) {
-  const { data } = useGitHubMetadata();
+export default function GitHubMetadata({ className = "" }: Omit<GitHubMetadataProps, "path">) {
+  const context = useGitHubMetadata();
+  const data = context?.data;
 
   if (!data) {
     return (
-      <div className={`text-slate-400 text-sm ${className}`}>
-        Unable to load last updated info
-      </div>
+      <div className={`text-slate-400 text-sm ${className}`}>Unable to load last updated info</div>
     );
   }
 
@@ -25,9 +22,7 @@ export default function GitHubMetadata({
   const lastUpdateInRelativeTime = getRelativeTime(lastUpdatedDate);
   const lastUpdateInAbsoluteTime = formatDate(lastUpdatedDate, "dd MMM yyyy");
   const createdDate = firstCommit?.commit.author.date;
-  const createdTime = createdDate
-    ? formatDate(createdDate, "d MMM yyyy")
-    : null;
+  const createdTime = createdDate ? formatDate(createdDate, "d MMM yyyy") : null;
 
   const tooltipContent = createdTime
     ? `Created ${createdTime}\nLast updated ${lastUpdateInAbsoluteTime}`
@@ -38,9 +33,7 @@ export default function GitHubMetadata({
       <div className="flex sm:flex-row flex-col sm:items-center gap-2">
         <span>
           Last updated by{" "}
-          <span className="font-bold text-black">
-            {latestCommit.commit.author.name}
-          </span>
+          <span className="font-bold text-black">{latestCommit.commit.author.name}</span>
           {` ${lastUpdateInRelativeTime}.`}
         </span>
         <div className="relative group">

@@ -21,16 +21,13 @@ export const TabsLayout = ({
   tinaProps: any;
 }) => {
   const [navigationDocsData, setNavigationDocsData] = React.useState({});
-  const [tabs, setTabs] = React.useState([]);
-  const [selectedTab, setSelectedTab] = React.useState();
-  const [objectOfSelectedTab, setObjectOfSelectedTab] = React.useState();
+  const [tabs, setTabs] = React.useState<any[]>([]);
+  const [selectedTab, setSelectedTab] = React.useState<any>();
+  const [objectOfSelectedTab, setObjectOfSelectedTab] = React.useState<any>();
   const pathname = usePathname();
 
   React.useEffect(() => {
-    const formattedNavData = formatNavigationData(
-      tinaProps.data as NavigationBarData,
-      false
-    );
+    const formattedNavData = formatNavigationData(tinaProps.data as NavigationBarData, false);
     setNavigationDocsData(formattedNavData);
     const tabs = formattedNavData.data.map((tab) => ({
       label: tab.title,
@@ -53,7 +50,7 @@ export const TabsLayout = ({
     window.dispatchEvent(
       new CustomEvent("tabChange", {
         detail: { value: initialIndex.toString() },
-      })
+      }),
     );
   }, [tabs, pathname]);
 
@@ -61,26 +58,17 @@ export const TabsLayout = ({
     setSelectedTab(value);
     setObjectOfSelectedTab(value);
     const newIndex = tabs.findIndex((tab) => tab.label === value);
-    window.dispatchEvent(
-      new CustomEvent("tabChange", { detail: { value: newIndex.toString() } })
-    );
+    window.dispatchEvent(new CustomEvent("tabChange", { detail: { value: newIndex.toString() } }));
   };
 
   return (
-    <Tabs.Root
-      value={selectedTab}
-      onValueChange={handleTabChange}
-      className="flex flex-col w-full"
-    >
+    <Tabs.Root value={selectedTab} onValueChange={handleTabChange} className="flex flex-col w-full">
       <TopNav tabs={tabs} navigationDocsData={navigationDocsData} />
       <NavigationProvider navigationData={navigationDocsData}>
         <div className="w-full flex flex-col md:flex-row gap-4 md:p-4 max-w-[2560px] mx-auto">
           <Sidebar tabs={tabs} />
           <main className="flex-1">
-            <Body
-              navigationDocsData={objectOfSelectedTab?.content}
-              children={children}
-            />
+            <Body navigationDocsData={objectOfSelectedTab?.content} children={children} />
           </main>
         </div>
       </NavigationProvider>
