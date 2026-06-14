@@ -73,10 +73,17 @@ const DocsMenu = async ({ children }: { children?: React.ReactNode }) => {
   }
 
   // Fetch navigation data that will be shared across all docs pages
-
-  const navigationData = await client.queries.minimisedNavigationBarFetch({
-    relativePath: "docs-navigation-bar.json",
-  });
+  let navigationData;
+  try {
+    navigationData = await client.queries.minimisedNavigationBarFetch({
+      relativePath: "docs-navigation-bar.json",
+    });
+  } catch (error) {
+    // During build without a running CMS server, the fetch will fail.
+    // Render children without navigation in that case.
+    console.warn("Failed to fetch navigation data:", (error as Error).message);
+    return <div className="relative flex flex-col w-full pb-2">{children}</div>;
+  }
 
   return (
     <div className="relative flex flex-col w-full pb-2">
