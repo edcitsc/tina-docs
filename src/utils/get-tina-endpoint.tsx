@@ -2,6 +2,13 @@
 // import { config } from "../../tina/config";
 
 export const getTinaEndpoint = (): string | null => {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
+  // Self-hosted mode: always use the local API route.
+  if (process.env.TINA_PUBLIC_USE_LOCAL_DB === "false") {
+    return `${siteUrl}/api/tina/gql`;
+  }
+
   if (process.env.NODE_ENV === "development") {
     return "http://localhost:4001/graphql";
   }

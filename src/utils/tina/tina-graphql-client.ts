@@ -12,13 +12,12 @@ export class TinaGraphQLClient {
     this.headers = {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
+      // Internal server-to-server calls use NEXTAUTH_SECRET as proof of trust.
+      ...(process.env.NEXTAUTH_SECRET ? { "X-Internal-Token": process.env.NEXTAUTH_SECRET } : {}),
     };
   }
 
-  async request<T = any>(
-    query: string,
-    variables: Record<string, any>
-  ): Promise<T> {
+  async request<T = any>(query: string, variables: Record<string, any>): Promise<T> {
     try {
       const response = await fetch(this.endpoint, {
         method: "POST",
@@ -30,8 +29,7 @@ export class TinaGraphQLClient {
 
       if (!response.ok || json.errors) {
         const errorMsg =
-          json.errors?.map((e: any) => e.message).join(", ") ||
-          `HTTP ${response.status}`;
+          json.errors?.map((e: any) => e.message).join(", ") || `HTTP ${response.status}`;
         throw new Error(errorMsg);
       }
 

@@ -6,6 +6,7 @@ import settings from "@/content/settings/config.json";
 import client from "@/tina/__generated__/client";
 import { GoogleTagManager } from "@next/third-parties/google";
 import { ThemeProvider } from "next-themes";
+import { unstable_noStore as noStore } from "next/cache";
 import { Inter, Roboto_Flex } from "next/font/google";
 
 import { TabsLayout } from "@/components/docs/layout/tab-layout";
@@ -22,17 +23,12 @@ const heading = Roboto_Flex({
   variable: "--heading-font",
 });
 
-const isThemeSelectorEnabled =
-  isDev || process.env.NEXT_PUBLIC_ENABLE_THEME_SELECTION === "true";
+const isThemeSelectorEnabled = isDev || process.env.NEXT_PUBLIC_ENABLE_THEME_SELECTION === "true";
 
 const theme = settings.selectedTheme || "default";
 const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
 
-export default function RootLayout({
-  children = null,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children = null }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`theme-${theme}`} suppressHydrationWarning>
       <head>
@@ -42,10 +38,7 @@ export default function RootLayout({
       </head>
       <body className={`${body.variable} ${heading.variable}`}>
         {!isDev && gtmId && (
-          <GoogleTagManager
-            gtmId={gtmId}
-            gtmScriptUrl="https://www.googletagmanager.com/gtm.js"
-          />
+          <GoogleTagManager gtmId={gtmId} gtmScriptUrl="https://www.googletagmanager.com/gtm.js" />
         )}
         <ThemeProvider
           attribute="class"
@@ -74,6 +67,11 @@ const Content = ({ children }: { children?: React.ReactNode }) => (
 );
 
 const DocsMenu = async ({ children }: { children?: React.ReactNode }) => {
+  // In dev mode, skip caching so CMS edits appear on refresh without a restart.
+  if (isDev) {
+    noStore();
+  }
+
   // Fetch navigation data that will be shared across all docs pages
 
   const navigationData = await client.queries.minimisedNavigationBarFetch({
