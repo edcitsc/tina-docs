@@ -135,7 +135,7 @@ async function buildIndex(siteUrl: string): Promise<MiniSearch<SearchableDocumen
       const path = breadcrumbs.join("/");
 
       documents.push({
-        id: `docs/${node._sys.relativePath}`,
+        id: `docs:${node._sys.relativePath}`,
         title: node.title || node._sys.filename,
         body: bodyText,
         collection: "docs",
