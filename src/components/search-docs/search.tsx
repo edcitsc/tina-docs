@@ -12,28 +12,23 @@ const pagefindPath = isDev
   : `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/_next/static/pagefind`;
 
 // Explicit override: set NEXT_PUBLIC_SEARCH_MODE=api to skip pagefind entirely.
-const searchMode = process.env.NEXT_PUBLIC_SEARCH_MODE as
-  | "api"
-  | "pagefind"
-  | undefined;
+const searchMode = process.env.NEXT_PUBLIC_SEARCH_MODE as "api" | "pagefind" | undefined;
 
 /**
  * Search via the TinaCMS self-hosted search API (/api/tina/search).
  */
 async function searchViaApi(
-  query: string
+  query: string,
 ): Promise<{ url: string; title: string; excerpt: string }[]> {
   const params = new URLSearchParams({ query, limit: "10" });
   const res = await fetch(`/api/tina/search?${params}`);
   if (!res.ok) throw new Error(`Search API returned ${res.status}`);
   const data = await res.json();
-  return (data.results || []).map(
-    (r: { path: string; title: string; collection: string }) => ({
-      url: `/${r.collection}/${r.path}`.replace(/\/+/g, "/"),
-      title: r.title || "Untitled",
-      excerpt: "",
-    })
-  );
+  return (data.results || []).map((r: { path: string; title: string; collection: string }) => ({
+    url: `/${r.collection}/${r.path}`.replace(/\/+/g, "/"),
+    title: r.title || "Untitled",
+    excerpt: "",
+  }));
 }
 
 /**
@@ -41,14 +36,12 @@ async function searchViaApi(
  * Returns null if pagefind is unavailable so caller can fall back.
  */
 async function searchViaPagefind(
-  query: string
+  query: string,
 ): Promise<{ url: string; title: string; excerpt: string }[] | null> {
   if (typeof window === "undefined") return null;
   let pagefindModule: any;
   try {
-    pagefindModule = await (window as any).eval(
-      `import("${pagefindPath}/pagefind.js")`
-    );
+    pagefindModule = await (window as any).eval(`import("${pagefindPath}/pagefind.js")`);
   } catch {
     return null; // pagefind not available
   }
@@ -59,12 +52,10 @@ async function searchViaPagefind(
       const data = await result.data();
 
       const searchTerms = query.toLowerCase().match(/\w+/g) || [];
-      const textToSearch = `${data.meta.title || ""} ${
-        data.excerpt
-      }`.toLowerCase();
+      const textToSearch = `${data.meta.title || ""} ${data.excerpt}`.toLowerCase();
       const words = textToSearch.match(/\w+/g) || [];
       const matchFound = searchTerms.every((term) =>
-        words.some((word: string) => word.includes(term))
+        words.some((word: string) => word.includes(term)),
       );
       if (!matchFound) return null;
 
@@ -77,7 +68,7 @@ async function searchViaPagefind(
         title: data.meta.title || "Untitled",
         excerpt: data.excerpt,
       };
-    })
+    }),
   );
   return searchResults.filter(Boolean);
 }
@@ -117,8 +108,7 @@ export function Search({ className }: { className?: string }) {
     setError(null);
 
     try {
-      let searchResults: { url: string; title: string; excerpt: string }[] | null =
-        null;
+      let searchResults: { url: string; title: string; excerpt: string }[] | null = null;
 
       // If mode is explicitly "pagefind", only try pagefind.
       // If mode is explicitly "api", only try API.
@@ -129,7 +119,7 @@ export function Search({ className }: { className?: string }) {
         searchResults = await searchViaPagefind(value);
         if (!searchResults) {
           setError(
-            "Unable to load search functionality. For more information, please check this README: https://github.com/tinacms/tina-docs?tab=readme-ov-file#search-functionality and refresh the page."
+            "Unable to load search functionality. For more information, please check this README: https://github.com/tinacms/tina-docs?tab=readme-ov-file#search-functionality and refresh the page.",
           );
           return;
         }
@@ -172,10 +162,7 @@ export function Search({ className }: { className?: string }) {
   };
 
   return (
-    <div
-      className="relative w-full md:max-w-lg lg:my-4 lg:mb-4"
-      ref={searchContainerRef}
-    >
+    <div className="relative w-full md:max-w-lg lg:my-4 lg:mb-4" ref={searchContainerRef}>
       <div className={`relative md:mr-4 ${className || ""}`}>
         <input
           type="text"
@@ -195,13 +182,7 @@ export function Search({ className }: { className?: string }) {
         </div>
       )}
 
-      {!error && (
-        <SearchResults
-          results={results}
-          isLoading={isLoading}
-          searchTerm={searchTerm}
-        />
-      )}
+      {!error && <SearchResults results={results} isLoading={isLoading} searchTerm={searchTerm} />}
     </div>
   );
 }
