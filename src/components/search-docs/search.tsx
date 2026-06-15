@@ -1,15 +1,86 @@
 "use client";
 
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { SearchResults } from "./search-results";
 
 const isDev = process.env.NODE_ENV === "development";
-// In development, the pagefind-entry.json is served from the root of the project.
-// In production, it is served from the _next/static/pagefind directory.
+// In development, pagefind is available from a local build.
+// In production self-hosted mode, pagefind won't exist — fall back to API search.
 const pagefindPath = isDev
   ? "/pagefind"
   : `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/_next/static/pagefind`;
+
+// Explicit override: set NEXT_PUBLIC_SEARCH_MODE=api to skip pagefind entirely.
+const searchMode = process.env.NEXT_PUBLIC_SEARCH_MODE as
+  | "api"
+  | "pagefind"
+  | undefined;
+
+/**
+ * Search via the TinaCMS self-hosted search API (/api/tina/search).
+ */
+async function searchViaApi(
+  query: string
+): Promise<{ url: string; title: string; excerpt: string }[]> {
+  const params = new URLSearchParams({ query, limit: "10" });
+  const res = await fetch(`/api/tina/search?${params}`);
+  if (!res.ok) throw new Error(`Search API returned ${res.status}`);
+  const data = await res.json();
+  return (data.results || []).map(
+    (r: { path: string; title: string; collection: string }) => ({
+      url: `/${r.collection}/${r.path}`.replace(/\/+/g, "/"),
+      title: r.title || "Untitled",
+      excerpt: "",
+    })
+  );
+}
+
+/**
+ * Search via pagefind (static index built at compile time).
+ * Returns null if pagefind is unavailable so caller can fall back.
+ */
+async function searchViaPagefind(
+  query: string
+): Promise<{ url: string; title: string; excerpt: string }[] | null> {
+  if (typeof window === "undefined") return null;
+  let pagefindModule: any;
+  try {
+    pagefindModule = await (window as any).eval(
+      `import("${pagefindPath}/pagefind.js")`
+    );
+  } catch {
+    return null; // pagefind not available
+  }
+
+  const search = await pagefindModule.search(query);
+  const searchResults = await Promise.all(
+    search.results.map(async (result: any) => {
+      const data = await result.data();
+
+      const searchTerms = query.toLowerCase().match(/\w+/g) || [];
+      const textToSearch = `${data.meta.title || ""} ${
+        data.excerpt
+      }`.toLowerCase();
+      const words = textToSearch.match(/\w+/g) || [];
+      const matchFound = searchTerms.every((term) =>
+        words.some((word: string) => word.includes(term))
+      );
+      if (!matchFound) return null;
+
+      return {
+        url: data.raw_url
+          .replace(/^\/server\/app/, "")
+          .replace(/\.html$/, "")
+          .replace(/\/+/g, "/")
+          .trim(),
+        title: data.meta.title || "Untitled",
+        excerpt: data.excerpt,
+      };
+    })
+  );
+  return searchResults.filter(Boolean);
+}
 
 export function Search({ className }: { className?: string }) {
   const [searchTerm, setSearchTerm] = useState("");
@@ -17,6 +88,7 @@ export function Search({ className }: { className?: string }) {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const searchContainerRef = useRef<HTMLDivElement>(null);
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -35,78 +107,67 @@ export function Search({ className }: { className?: string }) {
     };
   }, []);
 
-  const handleSearch = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    setSearchTerm(value);
-    setError(null);
-
+  const performSearch = useCallback(async (value: string) => {
     if (!value.trim()) {
       setResults([]);
-      setSearchTerm("");
       return;
     }
 
     setIsLoading(true);
+    setError(null);
 
     try {
-      if (typeof window !== "undefined") {
-        let pagefindModule: any;
-        try {
-          // Using eval to import pagefind.js is a workaround since the script isn't available during the build process.
-          // This also improves performance by loading the script only when needed, reducing initial page load time.
-          // A direct import would require committing the file with the codebase, which would change frequently
-          // with every content update.
+      let searchResults: { url: string; title: string; excerpt: string }[] | null =
+        null;
 
-          pagefindModule = await (window as any).eval(
-            `import("${pagefindPath}/pagefind.js")`
-          );
-        } catch (importError) {
+      // If mode is explicitly "pagefind", only try pagefind.
+      // If mode is explicitly "api", only try API.
+      // Otherwise, try pagefind first and fall back to API.
+      if (searchMode === "api") {
+        searchResults = await searchViaApi(value);
+      } else if (searchMode === "pagefind") {
+        searchResults = await searchViaPagefind(value);
+        if (!searchResults) {
           setError(
             "Unable to load search functionality. For more information, please check this README: https://github.com/tinacms/tina-docs?tab=readme-ov-file#search-functionality and refresh the page."
           );
           return;
         }
-
-        const search = await pagefindModule.search(value);
-
-        const searchResults = await Promise.all(
-          search.results.map(async (result: any) => {
-            const data = await result.data();
-
-            const searchTerms = value.toLowerCase().match(/\w+/g) || [];
-            const textToSearch = `${data.meta.title || ""} ${
-              data.excerpt
-            }`.toLowerCase();
-
-            const words = textToSearch.match(/\w+/g) || [];
-
-            const matchFound = searchTerms.every((term) =>
-              words.some((word: string) => word.includes(term))
-            );
-
-            if (!matchFound) return null;
-
-            return {
-              url: data.raw_url
-                .replace(/^\/server\/app/, "")
-                .replace(/\.html$/, "")
-                .replace(/\/+/g, "/")
-                .trim(),
-              title: data.meta.title || "Untitled",
-              excerpt: data.excerpt,
-            };
-          })
-        );
-
-        const filteredResults = searchResults.filter(Boolean);
-
-        setResults(filteredResults);
+      } else {
+        // Auto-detect: try pagefind, fall back to API
+        searchResults = await searchViaPagefind(value);
+        if (searchResults === null) {
+          searchResults = await searchViaApi(value);
+        }
       }
-    } catch (error) {
+
+      setResults(searchResults || []);
+    } catch {
       setError("An error occurred while searching. Please try again.");
       setResults([]);
     } finally {
       setIsLoading(false);
+    }
+  }, []);
+
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setSearchTerm(value);
+
+    if (!value.trim()) {
+      setResults([]);
+      setError(null);
+      if (debounceRef.current) clearTimeout(debounceRef.current);
+      return;
+    }
+
+    // Pagefind is local/instant so no debounce needed.
+    // API search uses debounce to avoid excessive server calls.
+    if (searchMode === "pagefind") {
+      performSearch(value);
+    } else {
+      if (debounceRef.current) clearTimeout(debounceRef.current);
+      debounceRef.current = setTimeout(() => performSearch(value), 300);
     }
   };
 
