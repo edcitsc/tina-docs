@@ -6,6 +6,7 @@ import CalloutTemplate from "@/tina/templates/markdown-embeds/callout.template";
 import CardGridTemplate from "@/tina/templates/markdown-embeds/card-grid.template";
 import CodeTabsTemplate from "@/tina/templates/markdown-embeds/code-tabs.template";
 import { FileStructureTemplate } from "@/tina/templates/markdown-embeds/file-structure.template";
+import GuidedStepTemplate from "@/tina/templates/markdown-embeds/guided-step.template";
 import RecipeTemplate from "@/tina/templates/markdown-embeds/recipe.template";
 import ScrollShowcaseTemplate from "@/tina/templates/markdown-embeds/scroll-showcase.template";
 import { TypeDefinitionTemplate } from "@/tina/templates/markdown-embeds/type-definition.template";
@@ -77,8 +78,7 @@ export const docsCollection = {
       type: "boolean",
       name: "tocIsHidden",
       label: "Hide Table of Contents",
-      description:
-        "Hide the Table of Contents on this page and expand the content window.",
+      description: "Hide the Table of Contents on this page and expand the content window.",
     },
     {
       type: "rich-text",
@@ -97,6 +97,7 @@ export const docsCollection = {
         CalloutTemplate as Template,
         TypeDefinitionTemplate as Template,
         FileStructureTemplate as unknown as Template,
+        GuidedStepTemplate as Template,
       ],
     },
   ],

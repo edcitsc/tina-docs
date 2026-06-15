@@ -8,6 +8,7 @@ import { FileStructure } from "./embedded-elements/file-structure";
 import RecipeBlock from "./embedded-elements/recipe";
 import { ScrollBasedShowcase } from "./embedded-elements/scroll-showcase";
 import TypeDefinition from "./embedded-elements/type-definition";
+import GuidedStep from "./embedded-elements/guided-step";
 import Youtube from "./embedded-elements/youtube";
 import Blockquote from "./standard-elements/blockquote";
 import { CodeBlock } from "./standard-elements/code-block/code-block";
@@ -109,16 +110,14 @@ type ComponentMapping = {
       parentId: string | null;
     }[];
   };
+  guidedStep: {
+    stepNumber: number;
+    section: string;
+    headingLevel: string;
+  };
 };
 
-type CalloutVariant =
-  | "warning"
-  | "info"
-  | "success"
-  | "error"
-  | "idea"
-  | "lock"
-  | "api";
+type CalloutVariant = "warning" | "info" | "success" | "error" | "idea" | "lock" | "api";
 
 export const MarkdownComponentMapping: Components<ComponentMapping> = {
   // Our embeds we can inject via MDX
@@ -139,15 +138,11 @@ export const MarkdownComponentMapping: Components<ComponentMapping> = {
   h4: (props) => <HeaderFormat level={4} {...props} />,
   h5: (props) => <HeaderFormat level={5} {...props} />,
   h6: (props) => <HeaderFormat level={6} {...props} />,
-  ul: (props) => (
-    <ul className="my-4 ml-2 list-disc text-neutral-text" {...props} />
-  ),
+  ul: (props) => <ul className="my-4 ml-2 list-disc text-neutral-text" {...props} />,
   hr: (props) => (
     <hr className="w-[50%] h-0.25 bg-neutral-text-secondary text-transparent ml-4 my-8" />
   ),
-  ol: (props) => (
-    <ol className="my-4 ml-2 list-decimal text-neutral-text" {...props} />
-  ),
+  ol: (props) => <ol className="my-4 ml-2 list-decimal text-neutral-text" {...props} />,
   li: (props) => <li className="mb-2 ml-8 " {...props} />,
   p: (props) => <p className="my-2.5 text-neutral-text" {...props} />,
   blockquote: (props) => <Blockquote {...props} />,
@@ -167,14 +162,11 @@ export const MarkdownComponentMapping: Components<ComponentMapping> = {
   img: (props) => <ImageComponent {...props} />,
   table: (props) => <Table {...props} />,
   code_block: (props) =>
-    props?.lang === "mermaid" ? (
-      <MermaidElement {...props} />
-    ) : (
-      <CodeBlock {...props} />
-    ),
+    props?.lang === "mermaid" ? <MermaidElement {...props} /> : <CodeBlock {...props} />,
   accordionBlock: (props) => <AccordionBlock {...props} />,
   typeDefinition: (props) => <TypeDefinition {...props} />,
   fileStructure: (props) => <FileStructure {...props} />,
+  guidedStep: (props) => <GuidedStep {...props} />,
 };
 
 export default MarkdownComponentMapping;
