@@ -20,6 +20,9 @@ WORKDIR /app
 RUN corepack enable && corepack prepare pnpm@${PNPM_VERSION} --activate
 COPY package.json pnpm-lock.yaml ./
 COPY patches ./patches
+# Explicitly set NODE_ENV=development to ensure devDependencies (e.g.
+# @tinacms/cli) are installed — they are needed for the build stage.
+ENV NODE_ENV=development
 RUN pnpm install --frozen-lockfile
 
 # ---------- build ----------
@@ -39,6 +42,12 @@ ENV TINA_PUBLIC_USE_LOCAL_DB=false
 ENV TINA_PUBLIC_USE_LOCAL_AUTH=false
 ENV NEXT_TELEMETRY_DISABLED=1
 
+# NEXT_PUBLIC_SITE_URL is baked into both the TinaCMS admin SPA and the
+# Next.js client bundle at build time. Must be the deployed URL so the admin
+# can reach /api/tina/gql on the correct origin.
+ARG NEXT_PUBLIC_SITE_URL=http://localhost:3000
+ENV NEXT_PUBLIC_SITE_URL=${NEXT_PUBLIC_SITE_URL}
+
 # Placeholder values for modules that validate env at import time during build.
 # The build never opens real connections; the Container App injects real values.
 ENV MONGODB_URI=mongodb://placeholder:placeholder@127.0.0.1:27017/placeholder
@@ -50,9 +59,17 @@ ENV ADO_PAT=placeholder
 # Enable standalone output mode for Docker deployment
 ENV STANDALONE_OUTPUT=true
 
-# Build: TinaCMS → Next.js → Pagefind (generates static search index)
-# The `postbuild` script in package.json runs pagefind automatically.
-RUN pnpm build
+# Build step 1: TinaCMS build (generates schema, admin SPA, etc.)
+# database.ts eagerly connects to MongoDB when USE_LOCAL_DB=false. Override
+# to true for the build step only. The admin SPA detects local mode via the
+# auth provider (USE_LOCAL_AUTH), not the DB flag — auth is correctly false.
+RUN TINA_PUBLIC_USE_LOCAL_DB=true pnpm exec tinacms build --skip-indexing
+
+# Build step 2: Next.js build
+# Pages are server-rendered dynamically (no CMS during build), so pagefind
+# cannot index content here. Skip it — admin search uses MiniSearch at
+# runtime, and pagefind can be run post-deploy if static indexing is needed.
+RUN pnpm exec next build
 
 # ---------- runtime ----------
 FROM node:${NODE_VERSION} AS runtime
@@ -70,6 +87,9 @@ RUN addgroup -S nodejs && adduser -S nextjs -G nodejs
 COPY --from=build --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=build --chown=nextjs:nodejs /app/.next/static ./.next/static
 COPY --from=build --chown=nextjs:nodejs /app/public ./public
+# tina-lock.json is needed by the /api/reindex endpoint to bootstrap the
+# database schema on first deploy.
+COPY --from=build --chown=nextjs:nodejs /app/tina/tina-lock.json ./tina/tina-lock.json
 
 USER nextjs
 EXPOSE 3000
