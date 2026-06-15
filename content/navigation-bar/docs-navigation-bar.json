@@ -114,6 +114,37 @@
               "_template": "item"
             }
           ]
+        },
+        {
+          "title": "WEC OLE Samples",
+          "items": [
+            {
+              "title": "Locate",
+              "items": [
+                {
+                  "slug": "content/docs/wec-ole-markdown-samples/locate-a-contract.mdx",
+                  "_template": "item"
+                },
+                {
+                  "slug": "content/docs/wec-ole-markdown-samples/locate-a-customer.mdx",
+                  "_template": "item"
+                },
+                {
+                  "slug": "content/docs/wec-ole-markdown-samples/locate-a-premise.mdx",
+                  "_template": "item"
+                }
+              ],
+              "_template": "items"
+            },
+            {
+              "slug": "content/docs/wec-ole-markdown-samples/payment-options.mdx",
+              "_template": "item"
+            },
+            {
+              "slug": "content/docs/wec-ole-markdown-samples/miscellaneous-contacts-list.mdx",
+              "_template": "item"
+            }
+          ]
         }
       ],
       "_template": "docsTab"
