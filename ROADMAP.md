@@ -26,3 +26,15 @@ Future improvements:
 - Add a `scripts/sync-content.ps1` that pulls from ADO (or copies from the local clone) automatically before `tinacms build`.
 - Or configure `tinacms build` to read from an alternate content path (if supported).
 - Long-term: the deployed `/api/reindex` endpoint should fetch content via the git provider API instead of relying on the local filesystem.
+
+### Fix remote `/api/reindex` endpoint
+The deployed reindex endpoint currently fails with "No bridge configured" because:
+1. The `database.indexContent()` method requires a "bridge" (file-system adapter) that reads content files, but in the standalone Docker image there's no `content/` folder at runtime.
+2. TinaCMS's `indexContent` was designed for local-mode indexing where content exists on disk.
+
+To make remote re-indexing work, the endpoint needs to either:
+- Include the content in the Docker image (adds size, requires rebuild on content change — defeats the purpose).
+- Implement a custom bridge that reads content from the git provider (ADO) API at indexing time.
+- Or call the TinaCMS CLI programmatically with a temporary checkout of the content repo.
+
+This is a non-trivial architectural change. For now, re-indexing is done locally via `tinacms build` with the content folder synced from the ADO repo clone.
