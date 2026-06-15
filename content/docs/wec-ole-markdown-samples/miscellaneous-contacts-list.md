@@ -1,0 +1,609 @@
+---
+title: Miscellaneous Contacts List
+category: Contact Directory
+utilities:
+  - MERC
+  - MGU
+  - NSG
+  - PGL
+  - WE
+  - WPS
+audience:
+  - Account Management
+  - Business Solutions Center
+  - Complex - Residential Billing
+  - Contact Center
+  - Credit - Collections
+  - Field Ops
+  - Payment Processing
+summary: Find internal department contacts, WPS district office contacts, and external reference contacts for MGU, MERC, NSG, PGL, WPS, and We Energies.
+last_reviewed: 8/19/2025 11:15 AM
+document_id: OLEV2-128226294-8309
+---
+
+# Miscellaneous Contacts List
+
+## Applies To
+
+- Utilities: MERC, MGU, NSG, PGL, WPS, WE
+- Audience: Account Management, Business Solutions Center, Complex - Residential Billing, Contact Center, Credit - Collections, Field Ops, Payment Processing
+
+## Description
+
+Phone and e-mail listings for internal departments, including WPS District Offices, and miscellaneous external contacts.
+
+## Contacts
+
+### Michigan Gas Utilities (MGU)
+
+- Website: [www.michigangasutilities.com](http://www.michigangasutilities.com/)
+
+### Internal Contacts
+
+- Business Solution Center (BSC)
+    - (844) 889-3500
+    - Fax: (800) 305-9754
+    - E-mail: [businesscenter@michigangasutilities.com](mailto:businesscenter@michigangasutilities.com)
+- Care Center
+    - General Service: (800) 401-6402
+    - Emergency: (800) 401-6451
+    - Fire/Police High Priority: (800) 401-6714
+    - Fax: (844) 889-3505
+    - E-mail: [customerservice@michigangasutilities.com](mailto:customerservice@michigangasutilities.com)
+- Customer Assistance Center (CAC)
+    - [CAC@michigangasutilities.com](mailto:CAC@michigangasutilities.com)
+- Field Support Dispatch
+    - (800) 382-8303
+- New Service Installation
+    - [newserviceinstallation@michigangasutilities.com](mailto:newserviceinstallation@michigangasutilities.com)
+- IT Service Desk
+    - (414) 221-3131
+    - [itservicedesk@wecenergygroup.com](mailto:itservicedesk@wecenergygroup.com)
+- Media Contacts
+    - (800) 977-2250
+- Supplier/Vendor Services (WEC)
+    - (414) 221-2345
+
+### State Commission
+
+- Michigan Public Service Commission (MPSC)
+    - (800) 292-9555
+    - [www.michigan.gov/mpsc](http://www.michigan.gov/mpsc)
+
+### External Contacts
+
+- AT&T
+    - (800) 244-4444
+    - [www.att.com](http://www.att.com/)
+- BillMatrix
+    - IVR: (855) 597-3379
+    - Agent: (855) 763-6274
+- Energy Efficiency
+    - (866) 772-1126
+- [Efficiency United](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Efficiency-United.aspx)
+    - (877) 367-3191
+    - [www.efficiencyunited.com](http://www.efficiencyunited.com/)
+- [Language Line](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Language-Line-Services.aspx) (AT&T)
+    - (866) 874-3972
+    - Client ID: 731791
+- Miss Dig
+    - (800) 482-7171 or 811
+    - [www.missdig.org](http://www.missdig.org/)
+- [Stock Holders Services (WEC)](https://energysource.wecenergygroup.com/legal/Pages/Stockholder%20Services.aspx)
+    - If an institutional investor (Baird, Fidelity etc.) is seeking answers to questions regarding Peoples Gas or TEGE Legacy, call Ashley Knutson at (414) 221-3339.
+    - If a shareholder is seeking answers to questions, please direct them to Virginia Ebert at (414) 221-4257.
+    - For all other general stock related questions:
+        - Computershare Shareowner Services LLC
+        - P.O. Box 30170
+        - College Station, TX 778-3170
+        - (800) 558-9663
+    - WEC Energy Group Stockholder Services: (800) 881-5882
+    - [www.wecenergygroup.com/contact/individual-investors](http://www.wecenergygroup.com/contact/individual-investors.htm)
+
+### Minnesota Energy Resources (MERC)
+
+- Website: [www.minnesotaenergyresources.com](http://www.minnesotaenergyresources.com/)
+
+### Internal Contacts
+
+- Business Solution Center (BSC)
+    - (844) 889-3400
+    - Fax: (800) 305-9754
+    - E-mail: [businesscenter@minnesotaenergyresources.com](mailto:businesscenter@minnesotaenergyresources.com)
+- Care Center
+    - General Service: (800) 889-9508
+    - Emergency: (800) 889-4970
+    - Fire/Police High Priority: (800) 889-2813
+    - ServiceChoice: (800) 889-3479
+    - ServiceChoice Parts Inquiry: (866) 494-0353
+    - ServiceChoice Special Use Number: (866) 772-1123
+    - Fax: (844) 889-3403
+    - E-mail: [customerservice@minnesotaenergyresources.com](mailto:customerservice@minnesotaenergyresources.com)
+- New Service Installation
+    - [newserviceinstallation@minnesotaenergyresources.com](mailto:newserviceinstallation@minnesotaenergyresources.com)
+- Customer Assistance Center (CAC)
+    - [CAC@minnesotaenergyresources.com](mailto:CAC@minnesotaenergyresources.com)
+- Field Support Dispatch
+    - (800) 382-8303
+- IT Service Desk
+    - (414) 221-3131
+    - [itservicedesk@wecenergygroup.com](mailto:itservicedesk@wecenergygroup.com)
+- Media Contacts
+    - (800) 977-2250
+- Supplier/Vendor Services (WEC)
+    - (414) 221-2345
+
+### State Commission
+
+- Minnesota Public Utilities Commission (MPUC)
+    - Local: (651) 296-0406
+    - Toll Free: (800) 657-3782
+    - [mn.gov/puc](https://mn.gov/puc/)
+
+### External Contacts
+
+- AT&T
+    - (800) 244-4444
+    - [www.att.com](http://www.att.com/)
+- [BillMatrix](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Quick-Payment-Process.aspx)
+    - IVR: (855) 597-3377
+    - Agent: (855) 763-6275
+- Energy Efficiency
+    - (866) 872-0052
+- Gopher State One Call
+    - (800) 252-1166 or 811
+    - [www.gopherstateonecall.org](http://www.gopherstateonecall.org/)
+- [Language Line](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Language-Line-Services.aspx) (AT&T)
+    - (866) 874-3972
+    - Client ID: 531461
+- [Stock Holders Services (WEC)](https://energysource.wecenergygroup.com/legal/Pages/Stockholder%20Services.aspx)
+    - If an institutional investor (Baird, Fidelity etc.) is seeking answers to questions regarding Peoples Gas or TEGE Legacy, call Ashley Knutson at (414) 221-3339.
+    - If a shareholder is seeking answers to questions, please direct them to Virginia Ebert at (414) 221-4257.
+    - For all other general stock related questions:
+        - Computershare Shareowner Services LLC
+        - P.O. Box 30170
+        - College Station, TX 778-3170
+        - (800) 558-9663
+    - WEC Energy Group Stockholder Services: (800) 881-5882
+    - [www.wecenergygroup.com/contact/individual-investors](http://www.wecenergygroup.com/contact/individual-investors.htm)
+
+### North Shore Gas (NSG)
+
+- Website: [www.northshoregasdelivery.com](http://www.northshoregasdelivery.com/)
+
+### Internal Contacts
+
+- Business Solution Center (BSC)
+    - (844) 889-3502
+    - Fax: (844) 889-3504
+    - E-mail: [businesscenter@northshoregasdelivery.com](mailto:businesscenter@northshoregasdelivery.com)
+- Care Center
+    - General Service: (866) 556-6004
+    - Emergency: (866) 556-6005
+    - Spanish: (866) 556-6003
+    - [TDD](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Telephone-Device-for-the-Deaf-(TDD).aspx): (866) 556-6007
+    - Fax: (844) 261-3991
+    - E-mail: [customerservice@northshoregasdelivery.com](mailto:customerservice@northshoregasdelivery.com)
+- Billing
+    - Choices For You: (866) 556-6006
+    - Gas Transportation Services: (800) 264-8026
+- Claims (bodily injury or property damage only)
+    - Local: (312) 240-4549
+    - Toll Free: (866) 227-2941
+- Credit/Collections
+    - [Bankruptcy](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/bankruptcy,%20amortization,%20and%20receiverships.aspx)
+        - (844) 288-4496
+        - Note: For internal use only; do not provide to customers.
+        - Fax: (844) 603-9149
+        - E-mail: [bank@northshoregasdelivery.com](mailto:bank@northshoregasdelivery.com)
+    - Collection Agency
+        - (844) 247-4116
+        - Note: For internal use only; do not provide to customers.
+    - [Enrollment Services](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/resolve-held-application.aspx)
+        - Fax: (844) 603-8993
+        - E-mail: [application@northshoregasdelivery.com](mailto:application@northshoregasdelivery.com)
+    - Gas Theft Hotline: (844) 216-9121
+    - Identity Theft Fax: (844) 603-9155
+    - [Medical Certificates](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/medical-extension-or-reconnection.aspx)
+        - (844) 248-7378
+        - Note: For internal use only; do not provide to customers.
+        - Fax: (844) 603-9181
+        - E-mail: [medical@northshoregasdelivery.com](mailto:medical@northshoregasdelivery.com)
+    - Occupant Usage: (312) 240-4353
+    - RPU Inspection Request: (312) 240-4979
+    - Suspected Steals: (312) 240-4991
+- Corporate Operator
+    - (800) 699-1269
+- Dispatch
+    - (312) 240-4848
+- Executive/Presidential Inquiries
+    - (800) 564-7213
+    - Note: Internal use only; do not provide to customers.
+- IT Service Desk
+    - (414) 221-3131
+    - [itservicedesk@wecenergygroup.com](mailto:itservicedesk@wecenergygroup.com)
+- Media Contacts
+    - (312) 240-4567
+- [New Service Installation](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Add-New-Premise-During-Turn-On.aspx)
+    - [newserviceinstallation@northshoregasdelivery.com](mailto:newserviceinstallation@northshoregasdelivery.com)
+- Supplier/Vendor Services (WEC)
+    - (414) 221-2345
+
+### State Commission
+
+- Illinois Commerce Commission (ICC)
+    - Chicago Office
+        - 160 North LaSalle Street
+        - Chicago, IL 60601-3104
+    - Springfield Office
+        - 527 E. Capitol Avenue
+        - P.O. Box 19280
+        - Springfield, IL 62794-9280
+    - Chicago: (800) 524-0795
+    - Statewide: (217) 782-2024
+    - TTD Line: (800) 735-3795
+    - [www.icc.illinois.gov](https://www.icc.illinois.gov/)
+
+### External Contacts
+
+- AT&T
+    - (800) 244-4444
+    - [www.att.com](http://www.att.com/)
+- [BillMatrix](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Quick-Payment-Process.aspx)
+    - IVR: (866) 546-7959
+    - Agent: (877) 315-6088
+- ComEd
+    - (800) 334-7661
+    - [www.comed.com](https://www.comed.com/)
+- Franklin Energy Services
+    - (855) 849-8928
+- JULIE
+    - (800) 892-0123 or 811
+    - [www.illinois1call.com](http://www.illinois1call.com/)
+- [Language Line](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Language-Line-Services.aspx) (AT&T)
+    - (866) 874-9426
+    - Internal Client ID: 706463
+    - iQor and Arise Client ID: 784019
+- [Low Income Home Energy Assistance Program (LIHEAP)](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Low-Income-Home-Energy-Assistance-Program-(LIHEAP)-Information.aspx)
+    - CAPLC: (847) 249-4330
+- NICOR
+    - (888) 642-6748
+    - [www.nicor.com](http://www.nicor.com/)
+- Peoples Energy Credit Union
+    - (312) 240-4970
+    - [www.peoplesenergycu.org](http://www.peoplesenergycu.org/)
+- [Share the Warmth](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/share-the-warmth-(stw)-grant-recipient-information.aspx)
+    - CAPLC: (847) 249-4330
+- [Stock Holders Services (WEC)](https://energysource.wecenergygroup.com/legal/Pages/Stockholder%20Services.aspx)
+    - If an institutional investor (Baird, Fidelity etc.) is seeking answers to questions regarding Peoples Gas or TEGE Legacy, call Ashley Knutson at (414) 221-3339.
+    - If a shareholder is seeking answers to questions, please direct them to Virginia Ebert at (414) 221-4257.
+    - For all other general stock related questions:
+        - Computershare Shareowner Services LLC
+        - P.O. Box 30170
+        - College Station, TX 778-3170
+        - (800) 558-9663
+    - WEC Energy Group Stockholder Services: (800) 881-5882
+    - [www.wecenergygroup.com/contact/individual-investors](http://www.wecenergygroup.com/contact/individual-investors.htm)
+
+### Peoples Gas (PGL)
+
+- Website: [www.peoplesgasdelivery.com](http://www.peoplesgasdelivery.com/)
+
+### Internal Contacts
+
+- Business Solution Center (BSC)
+    - (844) 889-3501
+    - Fax: (844) 899-3503
+    - E-mail: [businesscenter@peoplesgasdelivery.com](mailto:businesscenter@peoplesgasdelivery.com)
+- Care Center
+    - General Service: (866) 556-6001
+    - Emergency: (866) 556-6002
+    - Spanish: (866) 556-6003
+    - [TDD](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/telephone-device-for-the-deaf-(tdd).aspx): (866) 556-6007
+    - Fax: (844) 261-3991
+    - E-mail: [customerservice@peoplesgasdelivery.com](mailto:customerservice@peoplesgasdelivery.com)
+- New Service Installation
+    - [newserviceinstallation@peoplesgasdelivery.com](mailto:newserviceinstallation@peoplesgasdelivery.com)
+- Billing
+    - Choices For You: (866) 556-6006
+    - Gas Transportation Services: (800) 264-8026
+- Claims (bodily injury or property damage only)
+    - Local: (312) 240-4549
+    - Toll Free Hotline: (866) 227-2941
+- Corporate Operator
+    - (800) 699-1269
+- Credit/Collections
+    - [Bankruptcy](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/bankruptcy,%20amortization,%20and%20receiverships.aspx)
+        - (844) 288-4496
+        - Note: For internal use only; do not provide to customers.
+        - Fax: (844) 603-9149
+        - E-mail: [bank@peoplesgasdelivery.com](mailto:bank@peoplesgasdelivery.com)
+    - Collection Agency
+        - (844) 247-4116
+        - Note: For internal use only; do not provide to customers.
+    - [Enrollment Services](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/resolve-held-application.aspx)
+        - Fax: (844) 603-8993
+        - E-mail: [application@peoplesgasdelivery.com](mailto:application@peoplesgasdelivery.com)
+    - Gas Theft Hotline: (844) 216-9121
+    - Identity Theft Fax: (844) 603-9155
+    - [Medical Certificates](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/medical-extension-or-reconnection.aspx)
+        - (844) 248-7378
+        - Note: For internal use only; do not provide to customers.
+        - Fax: (844) 603-9181
+        - E-mail: [medical@peoplesgasdelivery.com](mailto:medical@peoplesgasdelivery.com)
+    - Occupant Usage: (312) 240-4353
+    - RPU Inspection Request: (312) 240-4979
+    - Suspected Steals: (312) 240-4991
+- Dispatch
+    - (312) 240-4849
+- Executive/Presidential Inquiries
+    - (800) 564-7213
+    - Note: Internal use only; do not provide to customers.
+- IT Service Desk
+    - (414) 221-3131
+    - [itservicedesk@wecenergygroup.com](mailto:itservicedesk@wecenergygroup.com)
+- Media Contacts
+    - (312) 240-4567
+- Supplier/Vendor Services (WEC)
+    - (414) 221-2345
+
+### State Commission
+
+- Illinois Commerce Commission (ICC)
+    - Chicago Office
+        - 160 North LaSalle Street
+        - Chicago, IL 60601-3104
+    - Springfield Office
+        - 527 E. Capitol Avenue
+        - P.O. Box 19280
+        - Springfield, IL 62794-9280
+    - Chicago: (800) 524-0795
+    - Statewide: (217) 782-2024
+    - TTD Line (for hearing impaired): (800) 735-3795
+    - [www.icc.illinois.gov](https://www.icc.illinois.gov/)
+
+### External Contacts
+
+- AT&T
+    - (800) 244-4444
+    - [www.att.com](http://www.att.com/)
+- [BillMatrix](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Quick-Payment-Process.aspx)
+    - IVR: (866) 846-1566
+    - Agent: (888) 393-9921
+- City of Chicago
+    - Inquiry and Information: 311 or (312) 744-5000
+    - Gatekeeper (voice): 311
+    - Gatekeeper TDD Line: (312) 744-6777
+    - Heating Complaints: 311 or (312) 744-5000
+    - [Heating Cost Disclosures](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/heating-cost-disclosure.aspx): (312) 744-4006
+    - Human Services: (800) 843-6154
+    - TTY: (800) 447-6404
+    - [www.cityofchicago.org](http://www.cityofchicago.org/)
+- ComEd
+    - (800) 334-7661
+    - [www.comed.com](http://www.comed.com/)
+- 811 Chicago
+    - (312) 744-7000 or 811
+    - [https://ipi.cityofchicago.org/Digger](https://ipi.cityofchicago.org/Digger)
+- [Language Line](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Language-Line-Services.aspx) (AT&T)
+    - (800) 874-9426
+    - Internal Client ID: 706463
+    - iQor and Arise Client ID: 784019
+- [Low Income Home Energy Assistance Program (LIHEAP)](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Low-Income-Home-Energy-Assistance-Program-(LIHEAP)-Information.aspx)
+    - CEDA: (800) 571-2332
+    - [cedaorg.net](http://www.cedaorg.net/www2/index.htm)
+- NICOR
+    - (888) 642-6748
+    - [www.nicor.com](http://www.nicor.com/)
+- [Share the Warmth](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/share-the-warmth-(stw)-grant-recipient-information.aspx)
+    - CEDA: (800) 571-2332
+- [Stock Holders Services (WEC)](https://energysource.wecenergygroup.com/legal/Pages/Stockholder%20Services.aspx)
+    - If an institutional investor (Baird, Fidelity etc.) is seeking answers to questions regarding Peoples Gas or TEGE Legacy, call Ashley Knutson at (414) 221-3339.
+    - If a shareholder is seeking answers to questions, please direct them to Virginia Ebert at (414) 221-4257.
+    - For all other general stock related questions:
+        - Computershare Shareowner Services LLC
+        - P.O. Box 30170
+        - College Station, TX 778-3170
+        - (800) 558-9663
+    - WEC Energy Group Stockholder Services: (800) 881-5882
+    - [www.wecenergygroup.com/contact/individual-investors](http://www.wecenergygroup.com/contact/individual-investors.htm)
+
+### Wisconsin Public Service (WPS) / Upper Michigan Energy Resources (UMERC)
+
+- Website: [www.wisconsinpublicservice.com](http://www.wisconsinpublicservice.com/)
+
+### Internal Contacts
+
+- Business Solution Center (BSC)
+    - (877) 444-0888
+    - Fax: (800) 305-9754
+    - E-mail: [businesscenter@wisconsinpublicservice.com](mailto:businesscenter@wisconsinpublicservice.com)
+- Care Center
+    - CCC: (800) 450-7260
+    - Gas Emergency: (800) 450-7280
+    - Electric Emergency: (800) 450-7240
+    - Fire/Police High Priority: (800) 450-7299
+    - Fax: (800) 722-1898
+    - CCC Faxes: (920) 430-6885
+    - Note: Do not give out CCC Fax unless fax is directly to you.
+    - E-mail: [customerservice@wisconsinpublicservice.com](mailto:customerservice@wisconsinpublicservice.com)
+- New Service Installation
+    - (800) 242-9772
+    - Fax: (866) 430-6021
+    - E-mail: [newserviceinstallation@wisconsinpublicservice.com](mailto:newserviceinstallation@wisconsinpublicservice.com)
+- Customer Assistance Center (CAC)
+    - (800) 427-1015
+    - Fax: (866) 731-6013
+    - E-mail: [CAC@wisconsinpublicservice.com](mailto:CAC@wisconsinpublicservice.com)
+- IT Service Desk
+    - (414) 221-3131
+    - [itservicedesk@wecenergygroup.com](mailto:itservicedesk@wecenergygroup.com)
+- Media Contacts
+    - (800) 977-2250
+- Supplier/Vendor Services (WEC)
+    - (414) 221-2345
+- Wispark
+    - (414) 274-4600
+    - [www.wispark.com](http://www.wispark.com/)
+
+### State Commissions
+
+- Michigan Public Service Commission (MPSC)
+    - (800) 292-9555
+    - [www.michigan.gov/mpsc](http://www.michigan.gov/mpsc)
+- Public Service Commission of Wisconsin (PSCW)
+    - (800) 225-7729
+    - [www.psc.wi.gov](http://www.psc.wi.gov/)
+
+### External Contacts
+
+- AT&T
+    - (800) 244-4444
+    - [www.att.com](http://www.att.com/)
+- [BillMatrix](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Quick-Payment-Process.aspx)
+    - IVR: (866) 844-7004
+    - Agent: (866) 860-5166
+- Diggers Hotline (WI)
+    - (800) 242-8511 or 811
+    - [www.diggershotline.com](http://www.diggershotline.com/)
+- [Efficiency United](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Efficiency-United.aspx)
+    - (877) 367-3191
+    - [www.efficiencyunited.com](http://www.efficiencyunited.com/)
+- [Focus on Energy (FOE)](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Focus-on-Energy.aspx)
+    - (800) 762-7077
+    - [www.focusonenergy.com](http://www.focusonenergy.com/)
+- [Language Line](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Language-Line-Services.aspx) (AT&T)
+    - (866) 874-3972
+    - Client ID: 731385
+- Miss Dig (MI)
+    - (800) 482-7171 or 811
+    - [www.missdig.org](http://www.missdig.org/)
+- [Stock Holders Services (WEC)](https://energysource.wecenergygroup.com/legal/Pages/Stockholder%20Services.aspx)
+    - If an institutional investor (Baird, Fidelity etc.) is seeking answers to questions regarding Peoples Gas or TEGE Legacy, call Ashley Knutson at (414) 221-3339.
+    - If a shareholder is seeking answers to questions, please direct them to Virginia Ebert at (414) 221-4257.
+    - For all other general stock related questions:
+        - Computershare Shareowner Services LLC
+        - P.O. Box 30170
+        - College Station, TX 778-3170
+        - (800) 558-9663
+    - WEC Energy Group Stockholder Services: (800) 881-5882
+    - [www.wecenergygroup.com/contact/individual-investors](http://www.wecenergygroup.com/contact/individual-investors.htm)
+
+### WPS District Office Contacts
+
+> Note: Designer and clerk hours of operation are 7 a.m. - 3 p.m. CT for all local offices.
+
+| Office                        | Electric and Emergency                        | Gas and Emergency                    | Clerk Email Address for Paperwork Orders                                                                                                                                                                     |
+| ----------------------------- | --------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ANTIGO (78)                   | (715) 345-7593 (Stevens Point)                | (715) 369-7167 (Rhinelander)         | Electric: [WPSC Stevens Point Operations Clerks](mailto:StevensPointOperationsClerks@wisconsinpublicservice.com)<br>Gas: [WPSC RHI Operations Clerks](mailto:RHIOperationsClerks@wisconsinpublicservice.com) |
+| CHILTON (32)                  | (920) 451-3702 (Sheboygan)                    | (920) 451-3702 (Sheboygan)           | [WPSC-SHSC-Operations-Clerks@wisconsinpublicservice.com](mailto:WPSC-SHSC-Operations-Clerks@wisconsinpublicservice.com)                                                                                      |
+| EAGLE RIVER (74)              | (715) 369-7167 (Rhinelander)                  | (715) 369-7167 (Rhinelander)         | [WPSC RHI Operations Clerks](mailto:RHIOperationsClerks@wisconsinpublicservice.com)                                                                                                                          |
+| GREEN BAY (10)                | (920) 617-5218<br>(920) 617-5206 (Meter Shop) | (920) 617-5218                       | [WPSC GBSC Operations Clerks](mailto:GBSCOperationsClerks@wisconsinpublicservice.com)                                                                                                                        |
+| KEWAUNEE (35)                 | (920) 657-1872 (Two Rivers)                   | (920) 657-1872 (Two Rivers)          | Electric/Gas: [WPSC TR Operations Clerks](mailto:TROperationsClerks@wisconsinpublicservice.com)                                                                                                              |
+| MARINETTE (81) MENOMINEE (82) | (906) 863-4303                                | (906) 863-4303                       | [WPSC MM Operations Clerks](mailto:MMOpsClerks@wisconsinpublicservice.com)                                                                                                                                   |
+| MERRILL (63)                  | (715) 345-7593 (Stevens Point)                | (715) 848-7433 (Wausau)              | Electric: [WPSC Stevens Point Operations Clerks](mailto:StevensPointOperationsClerks@wisconsinpublicservice.com)<br>Gas: [WPSC Wausau Operations Clerks](mailto:WausauOpsClerks@wisconsinpublicservice.com)  |
+| MINOCQUA (76)                 | (715) 358-4445                                | (715) 369-7167 (Rhinelander)         | [WPSC RHI Operations Clerks](mailto:RHIOperationsClerks@wisconsinpublicservice.com)                                                                                                                          |
+| OSHKOSH (40)                  | (920) 236-5984                                | (920) 236-5984                       | [WPSC OSH Operations Clerks](mailto:OSHOperationsClerks@wisconsinpublicservice.com)                                                                                                                          |
+| RHINELANDER (77)              | (715) 369-7167                                | (715) 369-7167                       | [WPSC RHI Operations Clerks](mailto:RHIOperationsClerks@wisconsinpublicservice.com)                                                                                                                          |
+| SHEBOYGAN (50)                |                                               | (920) 451-3702                       | [WPSC-SHSC-Operations-Clerks@wisconsinpublicservice.com](mailto:WPSC-SHSC-Operations-Clerks@wisconsinpublicservice.com)                                                                                      |
+| STEVENS POINT (64)            | (715) 345-7593                                | (715) 345-7593                       | [WPSC Stevens Point Operations Clerks](mailto:StevensPointOperationsClerks@wisconsinpublicservice.com)                                                                                                       |
+| STURGEON BAY (33)             | (920) 617-5218 (Green Bay)                    | (920) 657-1872 (Two Rivers)          | Electric: [WPSC GBSC Operations Clerks](mailto:GBSCOperationsClerks@wisconsinpublicservice.com)<br>Gas: [WPSC TR Operations Clerks](mailto:TROperationsClerks@wisconsinpublicservice.com)                    |
+| TOMAHAWK (75)                 | (715) 358-4445 (Minocqua)                     | (715) 358-4445 (Minocqua)            | [WPSC MIN Operations Clerks](mailto:MINOpsClerks@wisconsinpublicservice.com)                                                                                                                                 |
+| TWO RIVERS (31)               | (920) 657-1872                                | (920) 657-1872                       | [WPSC TR Operations Clerks](mailto:TROperationsClerks@wisconsinpublicservice.com)                                                                                                                            |
+| WABENO (83)                   | (715) 358-4416                                | (906) 863-4303 (Marinette/Menominee) | [WPSC MM Operations Clerks](mailto:MMOpsClerks@wisconsinpublicservice.com)                                                                                                                                   |
+| WAUPACA (69)                  | (715) 345-7593 (Stevens Point)                | (715) 345-7593 (Stevens Point)       | [WPSC Stevens Point Operations Clerks](mailto:StevensPointOperationsClerks@wisconsinpublicservice.com)                                                                                                       |
+| WAUSAU (61)                   | (715) 848-7433<br>(715) 848-7375 (Meter Shop) | (715) 848-7433                       | [WPSC Wausau Operations Clerks](mailto:WausauOpsClerks@wisconsinpublicservice.com)                                                                                                                           |
+| WAUSAUKEE (84)                | (906) 863-4303 (Marinette/Menominee)          | (906) 863-4303 (Marinette/Menominee) | [WPSC MM Operations Clerks](mailto:MMOpsClerks@wisconsinpublicservice.com)                                                                                                                                   |
+
+### We Energies
+
+- Website: [www.we-energies.com](http://www.we-energies.com/)
+
+### Internal Contacts
+
+- [Business Solution Center (BSC)](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Business-Solution-Center-(BSC).aspx)
+    - (800) 714-7777
+    - E-mail
+        - Small Business Center (SBC)
+            - External: [businesscenter@we-energies.com](mailto:businesscenter@we-energies.com)
+            - Internal: [CS-CCC-SBC@we-energies.com](mailto:CS-CCC-SBC@we-energies.com)
+        - Large Business Center (LBC)
+            - External: [businesscenterlbc@we-energies.com](mailto:businesscenterlbc@we-energies.com)
+            - Internal: [CS-CCC-BCC@we-energies.co](mailto:CS-CCC-BCC@we-energies.co)
+        - Property Management (internal): [Property-Management@we-energies.com](mailto:Property-Management@we-energies.com)
+- [Care Center](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Contact-Center.aspx)
+    - Residential: (800) 242-9137
+    - Electric Emergency: (800) 662-4797
+    - Gas Emergency: (800) 261-5325
+    - E-mail: [CustomerService@we-energies.com](mailto:CustomerService@we-energies.com)
+- [Support Line](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Support-Line-Contact-Information-.aspx)
+    - (262) 650-5083
+    - Fax: (262) 574-6345
+- Telecollections
+    - (800) 842-4565
+    - Directory/speed dial: WE Credit
+    - Fax: (414) 221-2117
+- New Construction
+    - PEWS New Electric Service
+        - (262) 574-6451
+        - Monday - Friday 7:00 a.m. - 3:30 p.m.
+    - Or advise caller to access the We Energies [New Construction](https://www.we-energies.com/contractors/builderdeveloper/applynewserv.htm) website if they prefer to self-serve.
+- IT Service Desk
+    - (414) 221-3131
+    - [itservicedesk@wecenergygroup.com](mailto:itservicedesk@wecenergygroup.com)
+- [Media Contacts](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Media-Contacts.aspx)
+    - (414) 221-4444
+- Supplier/Vendor Services (WEC)
+    - (414) 221-2345
+- Auction/Savage
+    - Nicole Vande Avond at (920) 617-2121
+    - Note: We Energies does not handle auction internally. Automobiles are auctioned through [JJ Kane](https://www.jjkane.com/) at their South Beloit, IL location.
+- Wispark
+    - (414) 274-4600
+    - [www.wispark.com](http://www.wispark.com/)
+
+### State Commissions
+
+- Michigan Public Service Commission (MPSC)
+    - [www.michigan.gov/mpsc](http://www.michigan.gov/mpsc)
+- Public Service Commission of Wisconsin (PSCW)
+    - (800) 225-7729
+    - [www.psc.wi.gov](http://www.psc.wi.gov/)
+
+### External Contacts
+
+- BillMatrix
+    - IVR: (888) 823-2943
+    - Agent: (866) 894-9381
+- Diggers Hotline (WI)
+    - (800) 242-8511 or 811
+    - [www.diggershotline.com](http://www.diggershotline.com/)
+- [Efficiency United](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Efficiency-United.aspx)
+    - (877) 367-3191
+    - [www.efficiencyunited.com](http://www.efficiencyunited.com/)
+- [Focus on Energy (FOE)](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Focus-on-Energy.aspx)
+    - (800) 762-7077
+    - [www.focusonenergy.com](http://www.focusonenergy.com/)
+- [Language Line](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Language-Line-Services.aspx) (AT&T)
+    - Emergency: WE Language Line directory/speed dial or (844) 718-5103
+    - Client ID: 731787
+    - Non-emergency: WE Language Line directory/speed dial or (877) 864-9867
+    - Client ID: 731343
+- Miss Dig (MI)
+    - (800) 482-7171 or 811
+    - [www.missdig.org](http://www.missdig.org/)
+- [Stock Holders Services (WEC)](https://energysource.wecenergygroup.com/legal/Pages/Stockholder%20Services.aspx)
+    - If an institutional investor (Baird, Fidelity etc.) is seeking answers to questions regarding Peoples Gas or TEGE Legacy, call Ashley Knutson at (414) 221-3339.
+    - If a shareholder is seeking answers to questions, please direct them to Virginia Ebert at (414) 221-4257.
+    - For all other general stock related questions:
+        - Computershare Shareowner Services LLC
+        - P.O. Box 30170
+        - College Station, TX 778-3170
+        - (800) 558-9663
+    - WEC Energy Group Stockholder Services: (800) 881-5882
+    - [https://www.wecenergygroup.com/contact/individual-investors.htm](https://www.wecenergygroup.com/contact/individual-investors.htm)
+
+## Metadata
+
+- Last Reviewed: 8/19/2025 11:15 AM
+- Document ID: OLEV2-128226294-8309

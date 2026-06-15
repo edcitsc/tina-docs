@@ -1,0 +1,167 @@
+---
+title: Transfer Service
+category: TODO
+utilities:
+  - MERC
+  - MGU
+  - NSG
+  - PGL
+  - WE
+  - WPS
+audience:
+  - Account Management
+  - Business Solutions Center
+  - Contact Center
+summary: Transfer eligible balances and billing or payment options when a customer moves, based on order status, contract status, contract type, credit standing, and utility rules.
+last_reviewed: 10/10/2025 6:16 AM
+document_id: OLEV2-128226294-8050
+---
+
+# Transfer Service
+
+## Applies To
+
+- Utilities: MERC, MGU, NSG, PGL, WPS, WE
+- Audience: Account Management, Business Solutions Center, Contact Center
+
+## Description
+
+The utilities offer customers the convenience of transferring balances and billing or payment options, including [Automatic Payment Plan](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Automatic-Payment-Plan-Overview.aspx), [Budget Billing](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/transfer-a-budget.aspx), [Paper-Free Billing](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Paper-Free-Billing.aspx), final balance, and MGU and NSG/PGL Small Volume Gas Transport, when they move. This occurs between contracts based on order status, contract status, contract type, and credit standing within the same utility. MGU and PGL/NSG Small Volume Transport customers' alternative gas supplier also transfers.
+
+> Note: MGU and UMERC only: A bill message displays on the new Turn On account when a balance is transferred from the previous Turn Off account. "Your previous account balance was transferred to your current account in accordance with Michigan Administrative Code R460.124(2). If you believe this transfer was made in error, or you would like to make a payment arrangement for the balance, please call us."
+
+## Eligibility
+
+### Eligible Transfers
+
+- Transfer from Turn Off/On window
+- Add Order Transfer
+- Direct Transfer
+
+### Ineligible Transfers
+
+- Completed Turn On and Turn Off orders. Use the direct transfer function.
+- Different customers. Exception: If you get approval from the receiving party, a transfer can occur.
+- To or from a bad debt contract.
+- Between different utilities.
+- Between residential and non-residential contracts.
+- A non-service contract.
+
+> Note: If the Turn Off order is cancelled before the order is completed, the selected items will not transfer to the Turn On contract.
+
+### Direct Transfer
+
+When issuing a Turn Off for an account with two customer names responsible (Y, Y), a direct transfer can be used to transfer the balance from the account with two names responsible to an account where only one of those two customers is listed. Refer to [Direct Transfer](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/direct-transfers.aspx).
+
+## Process
+
+### Transfer from Turn Off/On Window (Automatic Transfer)
+
+All billing and payment options above, along with the final balance, can be transferred automatically at the time of Turn Off/On.
+
+#### 1. Issue the Turn Off.
+
+1. Follow the [Turn Off](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Turn%20Off.aspx) process.
+
+> Note: In some situations, if there is already an In Progress Turn On at the premise where the customer is moving from, a Turn Off order is not needed. In these situations, the transfer functionality cannot be used.
+
+2. Check the Transfer Customer checkbox located at the bottom left corner of the order.
+3. Select Continue.
+
+#### 2. Issue the Turn On.
+
+1. Select the ellipsis (...) button next to the Premise Address field.
+   The Premise Search Overview window displays.
+2. Search for the address the customer is moving to.
+3. Select the address.
+   The address populates in the Premise Address field on the Issue Order window.
+4. Select Apply.
+5. Select the appropriate contract type from the Contract Type drop-down list.
+6. Follow the appropriate Turn On process.
+
+> Note: Ensure the [Contract Application](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Contract-Application.aspx) steps are followed as part of the Turn On.
+
+- [Residential Turn On WE WPS](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Residential-Turn-On-WE-WPS.aspx)
+- [Turn On MERC MGU](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Turn-On-MERC-MGU.aspx)
+- [Turn On PGL NSG](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/turn-on-pgl-nsg.aspx)
+- [Commercial or Agricultural Turn On WE WPS](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Commercial-or-Agricultural-Turn%20On-WE-WPS.aspx)
+
+7. Select Continue.
+
+#### 3. Transfer billing and payment options.
+
+1. Select Yes.
+   The Transfer Customer window displays.
+2. In the Items To Transfer group box, select the appropriate items to transfer.
+
+> Note: Only items available for transfer display.
+
+- Automatic Payment Plan
+
+> Note: Always select Final balance when selecting Automatic Payment Plan.
+
+- Budget Billing
+
+> Note: Issue: Budget Transfer is currently not working properly; however, it still appears on the Transfer Customer window if the customer is enrolled in Budget Billing.
+
+    - Do not select Budget Billing.
+    - Advise the customer that the budget will settle on the current Turn Off account.
+    - Advise the customer to enroll after they receive the first bill by using the auto-enroll bill message.
+    - Along with the Budget Billing Talking Points, share this bill message with the customer: "Even out your energy bills! Enroll in Budget Billing by paying exactly <amount>, rather than the amount due shown. This will then be your monthly Budget amount. Every six months, your account will be reviewed and your payment may be adjusted to better reflect your actual use."
+    - If the customer insists that Budget Billing be established for them, [Add a Note Follow-up](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/add-a-note-follow-up.aspx) with the following details:
+        - Type: Note Follow-up
+    - Assign To Work Group: Contact Center
+        - Defer Until Date: One business day after first bill prints
+    - Remark: Customer request Budget Billing at time of Turn On; establish once first bill prints.
+
+- Paper-Free Billing
+
+> Note: Issue: Paper-Free preference is not transferring for enrolled customers. Make note if the customer is enrolled in Paper-Free and establish it manually on the new Turn On account.
+
+    - [Solicit Paper-Free Billing](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Solicit-Paper-Free-Billing.aspx).
+    - Confirm e-mail address.
+
+- Final balance
+
+> Note: If Credit in Budget Balance, it is applied as a payment credit on the first month's bill.
+
+- MGU or PGL/NSG Small Volume Gas Transport customer's alternative gas supplier will transfer.
+
+> Note: Do not transfer PGL/NSG SVGT charges. Advise the customer to pay the outstanding supplier charges on the current Turn Off account.
+
+3. Select OK.
+
+> Note: If the message "ERROR: #10686 - Transfers are not allowed across contracts that belong to different companies" is received:
+
+    - Select OK on the message.
+    - Select Back on the Transfer Customer window.
+    - Select Back on the Issue Order window for the Turn On.
+    - Uncheck the Transfer Customer box, then continue with the Turn Off order.
+    - Create a new customer record for the customer for the Turn On at the new utility and issue the Turn On.
+
+> Note: If an [error message](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Transfer-Service.aspx) other than the message above is received and prevents the transfer of service, complete separate Turn Off and Turn On orders, then complete a [manual transfer](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Transfer-Service.aspx).
+
+### Add Order Transfer (Manual Transfer)
+
+Add Order Transfer can be done when:
+
+- A Turn Off and Turn On exist for the same customer.
+- At least one order is In-progress or Pending status. One order can be completed.
+
+1. [Locate a Contract](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/locate-a-contract.aspx).
+2. Select the Orders tab, then select Add Order Transfer.
+   The Transfer Order window displays.
+3. Select billing and payment in the Items To Transfer group box.
+
+> Note: Only enrolled programs display.
+
+4. Select OK.
+
+> Note: View transfer details on the Transfer List window.
+
+5. If the message "ERROR: #10686 - Transfers are not allowed across contracts that belong to different companies" is received, select OK.
+   The balance cannot be transferred between utilities.
+
+## Conversion Notes
+
+- Missing metadata from source: category

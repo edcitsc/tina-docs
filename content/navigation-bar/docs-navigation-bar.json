@@ -15,6 +15,10 @@
             {
               "slug": "content/docs/introduction/showcase.mdx",
               "_template": "item"
+            },
+            {
+              "slug": "content/docs/a-custom-page.mdx",
+              "_template": "item"
             }
           ]
         },

@@ -1,0 +1,140 @@
+---
+title: Locate a Contract
+category: Search Procedures
+utilities:
+   - MERC
+   - MGU
+   - NSG
+   - PGL
+   - WPS
+   - WE
+audience:
+   - Account Management
+   - Business Solutions Center
+   - Complex - Residential Billing
+   - Contact Center
+   - Credit - Collections
+   - Field Ops
+   - Payment Processing
+summary: Locate a contract in Open-cIS by searching with customer, contract, address, billing, or attribute criteria, using narrower or broader search details as needed to find the correct result.
+last_reviewed: 7/25/2022 3:12 PM
+document_id: OLEV2-128226294-7539
+---
+
+# Locate a Contract
+
+## Applies To
+
+- Utilities: MERC, MGU, NSG, PGL, WPS, WE
+- Audience: Account Management, Business Solutions Center, Complex - Residential Billing, Contact Center, Credit - Collections, Field Ops, Payment Processing
+
+## Description
+
+A contract is located in Open-cIS by entering search criteria. In some cases, it may be beneficial to limit the search criteria entered. The more detailed search information entered, the narrower the search results.
+
+Search methods available on the Contract Search window are:
+
+- Customer
+- Contract
+- Address
+- Billing
+- Attribute
+
+> Note: When searching for a related customer that is responsible for the bill, no results may return if the related customer does not have a contract as the primary customer. Perform a Customer search to locate the related customer.
+
+## Process
+
+### CIS System Steps - Only
+
+1. On the Home tab, select Contract.
+   The Contract Search window displays.
+2. Select the appropriate Search Criteria method.
+
+    > Note: Search by using one or more of steps 3 to 7.
+
+3. Do one or more of the following to locate a contract by customer information:
+
+    > Note: The wildcard (*) can be used to enhance search results when there is uncertainty about the data that needs to be entered.
+
+    > Example: The wildcard can be used when searching for the business Saratoga Partners, LTD, by entering the wildcard after Saratoga Partners in the Full Name field: Saratoga Partners*
+
+    - Enter customer's last name in the Last field.
+    - Enter customer's first name in the First field.
+    - Enter customer's middle initial in the Middle field.
+    - Select the appropriate customer type from the Type drop-down list.
+    - Enter customer's phone number in the Phone # field.
+    - Enter business name in the Full Name field.
+    - Enter customer's social security number in the Social Security # field.
+    - Enter business tax identification number in the Tax Id field.
+    - Check Include Related, if applicable.
+    - Check Include DBA, if applicable.
+
+4. Do one or more of the following to locate a contract by contract information:
+
+    - Enter contract number in the Contract # field.
+    - Or enter old contract number in the Old Contract # field.
+
+        > Note: No other information is necessary if the Contract # or Old Contract # is entered.
+
+    - Select the appropriate contract type from the Contract Type drop-down list.
+    - Select the appropriate contract status from the Contract Status drop-down list.
+    - Select the appropriate region from the Region drop-down list.
+    - Select the appropriate company from the Company drop-down list.
+
+5. Do one or more of the following to locate a contract by address information:
+
+    > Note: The wildcard (*) can be used to enhance search results when there is uncertainty about the data that needs to be entered.
+
+    > Example: The wildcard can be used to locate the street name "County Road Q" by entering the wildcard before the letter Q: *Q
+
+    - Enter house number in the House # field.
+    - Select the appropriate street prefix from the Street Prefix drop-down list.
+    - Enter street name in the Street Name field.
+    - Select the appropriate street type from the Street Type drop-down list.
+    - Select the appropriate street suffix from the Street Suffix drop-down list.
+    - Enter city in the City field.
+    - Select the appropriate state from the State drop-down list.
+    - Enter zip code in the Zip field.
+    - Enter county in the County field.
+    - Select the appropriate address type from the Address Type drop-down list.
+    - Select the appropriate apartment type from the Apartment Type drop-down list.
+    - Enter apartment number in the Apartment # field.
+    - Enter device serial number in the Device Serial # field.
+
+        > Note: The device serial number is used for locating gas and electric meters when no other address information is entered.
+
+    - Check Associated Device, if applicable.
+
+6. Do any or all of the following to locate contract(s) by billing information:
+
+    - Select the appropriate supplier from the Supplier drop-down list.
+    - Enter invoice number in the Invoice # field.
+
+7. Do the following to locate contract(s) by contract attributes:
+
+    - Select Attributes Expand/Collapse arrow.
+    - Select Add + in the Attribute group box.
+    - The Attribute Search Criteria fields display.
+    - Select the appropriate entity from the Entity Type drop-down list.
+    - Select the appropriate sub type from the Sub Type drop-down list.
+
+        > Note: The sub types available in the drop-down list are based on the entity type selected.
+
+    - Select the appropriate attribute from the Attribute drop-down list.
+
+        > Note: The attributes available in the drop-down list are based on the entity type selected.
+
+    - Select the appropriate operator from the Operator drop-down list.
+    - Select the appropriate value in the Search Value drop-down list.
+
+        > Note: The search values available in the drop-down list are based on the attribute selected.
+
+    - Repeat steps for each applicable attribute.
+
+8. Select Search.
+   A list of contracts matching the search criteria entered displays in the Results group box.
+
+## Metadata
+
+- Last Reviewed: 7/25/2022 3:12 PM
+- Document ID: OLEV2-128226294-7539

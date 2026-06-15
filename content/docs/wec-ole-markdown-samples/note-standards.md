@@ -1,0 +1,80 @@
+---
+title: Note Standards
+category: Documentation Standards
+utilities:
+  - MERC
+  - MGU
+  - NSG
+  - PGL
+  - WPS
+    - WE
+audience:
+  - Business Solutions Center
+  - Contact Center
+summary: Follow note-entry standards in Open-cIS for all account interactions, avoid recording personal identifying information, and use clear, concise documentation practices such as the R.A.R.E. method.
+last_reviewed: 4/15/2025 10:28 AM
+document_id: OLEV2-128226294-8492
+---
+
+# Note Standards
+
+## Applies To
+
+- Utilities: MERC, MGU, NSG, PGL, WPS, WE
+- Audience: Business Solutions Center, Contact Center
+
+## Description
+
+It is necessary to enter a note in Open-cIS on all accounts each and every time an account is accessed and discussed. This is not required when entering Turn On, Turn Off, electric emergency, or OMS Report for an outage.
+
+> Note: Documentation is required when advising of safety precautions and animal restraint.
+
+## Standards
+
+- Do not enter or paste customers' social security numbers (SSN) or any other personal identifying information into notes.
+    - Examples:
+        - Bank account numbers and PINs
+        - Credit card numbers
+        - Driver's License and State ID numbers
+        - Social Security numbers
+        - Tax ID and FEIN numbers
+        - Any other data that can be used to distinguish or trace the identity of an individual, alone or when combined with other personal identifying information
+- When it is necessary to copy contents of an e-mail interaction into a note, X out the personal identifying information.
+    - Example:
+        - SSN: XXX-XX-XXXX
+        - Driver's License number: CXXX-XXXX-XXXX
+- When entering a phone number in a note, enter all digits of the phone number so it does not appear as a SSN.
+    - If the number is entered in the social security number format, the following overridable alert message displays: "Remark text appears to contain a Social Security Number (SSN)."
+- When entering a note, describe the action(s) taken.
+    - Use complete words or approved abbreviations only.
+    - Observe grammar rules.
+    - Avoid emotion.
+        - Do not enter negative comments about a customer or other employees.
+        - Do not use questionable language.
+        - Our records may be reviewed by one of the State Commissions and or be used in legal proceedings.
+    - Enter notes while conversing with the customer whenever possible.
+    - When following up on a previous note, include status and actions that have been taken as a result of the previous note.
+    - Questions regarding the appropriateness of a note should be referred to a leader.
+- When crafting a note, use the R.A.R.E. method to ensure the note is clear and concise so that others reviewing the note understand what took place.
+    - Reason: State the reason for the customer's call.
+    - Action: State the action(s) taken to resolve the customer's inquiry.
+    - Result: State how the call ended with the customer.
+    - Edit: Edit notes for clarity and conciseness.
+- When issuing a Pump It Up (PIU) or Supervisor Callback, start the note with PIU or Supv. This allows leadership to easily identify notes related to escalated customer interaction.
+    - Example:
+        - PIU issued because Mr. Smith was upset because his gas usage had been billed with an estimated reading. Mr. Smith provided an actual reading, and a work item was submitted to billing for correction. Customer wants billing expedited.
+        - Supv callback issued because Mr. Smith wanted to express his concerns to management about the Bill Matrix fee.
+- Leaders only: When completing a PIU or Supervisor Callback follow-up, start the note with PIU Follow-up or Supv Follow-up.
+
+## Related Links
+
+- Add a Note
+- Notes Overview
+- Quality Assurance for Calls EXCEL
+- Quality Assurance for Correspondence EXCEL
+- Sensitive Note Types and Sub Types
+
+## Metadata
+
+- Last Reviewed: 4/15/2025 10:28 AM
+- Document ID: OLEV2-128226294-8492
