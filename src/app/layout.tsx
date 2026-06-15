@@ -67,10 +67,8 @@ const Content = ({ children }: { children?: React.ReactNode }) => (
 );
 
 const DocsMenu = async ({ children }: { children?: React.ReactNode }) => {
-  // In dev mode, skip caching so CMS edits appear on refresh without a restart.
-  if (isDev) {
-    noStore();
-  }
+  // Skip caching so CMS edits to navigation appear on refresh.
+  noStore();
 
   // Fetch navigation data that will be shared across all docs pages
   let navigationData;
