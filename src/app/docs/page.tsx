@@ -8,10 +8,9 @@ import { getTableOfContents } from "@/utils/docs";
 import { getSeo } from "@/utils/metadata/getSeo";
 import Document from "./[...slug]";
 
-const siteUrl =
-  process.env.NODE_ENV === "development"
-    ? "http://localhost:3000"
-    : settings.siteUrl;
+export const dynamic = "force-dynamic";
+
+const siteUrl = process.env.NODE_ENV === "development" ? "http://localhost:3000" : settings.siteUrl;
 
 export async function generateMetadata() {
   const slug = "index";
