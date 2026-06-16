@@ -7,11 +7,12 @@ import { SelfHostedSearchClient } from "./search/self-hosted-search-client";
 const isLocalAuth =
   (process.env.TINA_PUBLIC_USE_LOCAL_AUTH ?? process.env.TINA_PUBLIC_IS_LOCAL ?? "true") === "true";
 
-// The admin SPA runs in the browser at the same origin as the API, so a
-// relative path works universally and avoids baking a hostname at build time.
-// Only override with an absolute URL when TINA_LOCAL_URL is explicitly set
-// (e.g. local pagefind build talks to port 4001 directly).
-const contentApiUrl = process.env.TINA_LOCAL_URL || "/api/tina/gql";
+// contentApiUrlOverride is baked into the admin SPA and the generated client.
+// It must be an absolute URL for server-side rendering (Node.js fetch needs a
+// full origin). For Docker builds, pass --build-arg NEXT_PUBLIC_SITE_URL with
+// the deployed URL so the admin SPA also resolves to the correct origin.
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+const contentApiUrl = process.env.TINA_LOCAL_URL || `${siteUrl}/api/tina/gql`;
 
 export const config = defineConfig({
   contentApiUrlOverride: contentApiUrl,
