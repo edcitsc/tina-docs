@@ -42,10 +42,9 @@ ENV TINA_PUBLIC_USE_LOCAL_DB=false
 ENV TINA_PUBLIC_USE_LOCAL_AUTH=false
 ENV NEXT_TELEMETRY_DISABLED=1
 
-# NEXT_PUBLIC_SITE_URL is baked into both the TinaCMS admin SPA and the
-# Next.js client bundle at build time. Must be the deployed URL so the admin
-# can reach /api/tina/gql on the correct origin.
-ARG NEXT_PUBLIC_SITE_URL=http://localhost:3000
+# NEXT_PUBLIC_SITE_URL is used by next-sitemap and OG meta tags at build time.
+# It is NOT used for the TinaCMS admin API URL (which uses a relative path).
+ARG NEXT_PUBLIC_SITE_URL=
 ENV NEXT_PUBLIC_SITE_URL=${NEXT_PUBLIC_SITE_URL}
 
 # Placeholder values for modules that validate env at import time during build.
