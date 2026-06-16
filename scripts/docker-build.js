@@ -38,16 +38,13 @@ function loadEnvValue(key) {
   return null;
 }
 
-const siteUrl =
-  process.env.SITE_URL ||
-  loadEnvValue("NEXT_PUBLIC_SITE_URL") ||
-  null;
+const siteUrl = process.env.SITE_URL || loadEnvValue("NEXT_PUBLIC_SITE_URL") || null;
 
 if (!siteUrl || siteUrl === "http://localhost:3000") {
   console.error(
     "ERROR: NEXT_PUBLIC_SITE_URL is not set to a deployed URL.\n" +
       "       Set it in .env.local or pass SITE_URL=https://... as an env variable.\n" +
-      "       Without it, SSR will fail with 404s and admin will get CORS errors."
+      "       Without it, SSR will fail with 404s and admin will get CORS errors.",
   );
   process.exit(1);
 }
@@ -71,7 +68,7 @@ execSync(
     ` -t ${ACR_REPO}:${tag}` +
     ` -t ${ACR_REPO}:latest` +
     ` .`,
-  { stdio: "inherit" }
+  { stdio: "inherit" },
 );
 
 // --- Push ---
@@ -90,7 +87,7 @@ if (process.env.DEPLOY === "true") {
   const revision = execSync(
     `az containerapp update --name ${CONTAINER_APP} --resource-group ${RESOURCE_GROUP}` +
       ` --image ${ACR_REPO}:${tag} --query "properties.latestRevisionName" -o tsv`,
-    { encoding: "utf8" }
+    { encoding: "utf8" },
   ).trim();
   console.log(`Deployed revision: ${revision}`);
 } else {
@@ -98,7 +95,7 @@ if (process.env.DEPLOY === "true") {
     `\nTo deploy, run:\n  DEPLOY=true pnpm run build:docker\n` +
       `Or manually:\n  az containerapp update --name ${CONTAINER_APP}` +
       ` --resource-group ${RESOURCE_GROUP}` +
-      ` --image ${ACR_REPO}:${tag}`
+      ` --image ${ACR_REPO}:${tag}`,
   );
 }
 
