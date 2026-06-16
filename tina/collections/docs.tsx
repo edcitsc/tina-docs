@@ -59,6 +59,58 @@ export const docsCollection = {
     },
     {
       type: "string",
+      name: "category",
+      label: "Category",
+      description:
+        "Short business classification in Title Case (e.g. Search Procedures, Start Service Procedures).",
+    },
+    {
+      type: "string",
+      name: "utilities",
+      label: "Utilities",
+      list: true,
+      options: ["MERC", "MGU", "NSG", "PGL", "WE", "WPS"],
+      description: "One or more utilities this document applies to.",
+    },
+    {
+      type: "string",
+      name: "audience",
+      label: "Audience",
+      list: true,
+      options: [
+        "Account Management",
+        "Business Solutions Center",
+        "Complex - Residential Billing",
+        "Contact Center",
+        "Credit - Collections",
+        "Field Ops",
+        "Payment Processing",
+      ],
+      description: "One or more audience groups this document applies to.",
+    },
+    {
+      type: "string",
+      name: "summary",
+      label: "Summary",
+      description: "One sentence that explains what the document helps the reader do.",
+      ui: {
+        component: "textarea",
+      },
+    },
+    {
+      type: "string",
+      name: "document_id",
+      label: "Document ID",
+      description: "Unique identifier in OLEV2-#########-#### format.",
+    },
+    {
+      type: "string",
+      name: "last_reviewed",
+      label: "Last Reviewed",
+      description: "Date and time in M/D/YYYY h:mm AM/PM format.",
+    },
+    {
+      type: "string",
       name: "last_edited",
       label: "Last Edited",
       ui: {
