@@ -5,6 +5,11 @@
       "source": "/",
       "destination": "/docs/wec-ole-markdown-samples/locate-a-contract",
       "permanent": true
+    },
+    {
+      "source": "/docs",
+      "destination": "/docs/wec-ole-markdown-samples/locate-a-contract",
+      "permanent": false
     }
   ],
   "title": "OLE",
