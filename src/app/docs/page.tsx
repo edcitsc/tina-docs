@@ -1,5 +1,5 @@
 import { TinaClient } from "@/app/tina-client";
-import settings from "@/content/siteConfig.json";
+import settings from "@/content/settings/config.json";
 import { fetchTinaData } from "@/services/tina/fetch-tina-data";
 import { GitHubMetadataProvider } from "@/src/components/page-metadata/github-metadata-context";
 import GitHubClient from "@/src/utils/github-client";

@@ -3,7 +3,7 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "/docs",
+      "destination": "/docs/wec-ole-markdown-samples/locate-a-contract",
       "permanent": true
     }
   ],

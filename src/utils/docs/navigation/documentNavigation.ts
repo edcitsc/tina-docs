@@ -1,4 +1,4 @@
-import siteConfig from "@/content/siteConfig.json";
+import siteConfig from "@/content/settings/config.json";
 import client from "@/tina/__generated__/client";
 
 /**
@@ -131,7 +131,7 @@ const transformReferencesToSlugs = (navItems: NavItem[]): NavItem[] => {
  */
 export const formatNavigationData = (
   navigationData: NavigationBarData,
-  preview = false
+  preview = false,
 ): FormattedNavigation => {
   const tabs = navigationData.navigationBar.tabs || [];
   const lightModeLogo = navigationData.navigationBar?.lightModeLogo || "";
