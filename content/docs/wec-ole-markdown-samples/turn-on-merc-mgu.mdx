@@ -1,5 +1,4 @@
 ---
-title: Turn On MERC MGU
 category: Start Service Procedures
 utilities:
   - MERC
@@ -9,33 +8,36 @@ audience:
   - Contact Center
   - Credit - Collections
   - Field Ops
-summary: Issue a Turn On order for MERC or MGU service by validating the premise, customer, meter, credit, and order conditions, then completing the order and required follow-up steps.
-last_reviewed: 10/10/2025 7:49 AM
+summary: 'Issue a Turn On order for MERC or MGU service by validating the premise, customer, meter, credit, and order conditions, then completing the order and required follow-up steps.'
+last_reviewed: '10/10/2025 7:49 AM'
 document_id: OLEV2-128226294-8064
+title: Turn On MERC MGU
+last_edited: '2026-06-15T20:40:36.622Z'
+auto_generated: false
 ---
 
 # Turn On MERC MGU
 
 ## Applies To
 
-- Utilities: MERC, MGU
-- Audience: Business Solutions Center, Contact Center, Credit - Collections, Field Ops
+* Utilities: MERC, MGU
+* Audience: Business Solutions Center, Contact Center, Credit - Collections, Field Ops
 
 ## Description
 
 A Turn On order is issued to initiate billing for a new or existing customer. This request can only be accepted by the customer of record.
 
-> Note: If customer of record or third party requests to put service in the name of a revocable trust or irrevocable trust, refer to [Customer Confidentiality](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Customer-Confidentiality.aspx).
+> Note: If customer of record or third party requests to put service in the name of a revocable trust or irrevocable trust, refer to [Customer Confidentiality](//OLECustomer-Confidentiality.aspx).
 
-> Note: If customers request the status of a scheduled appointment or missed appointment, refer to [Verifiy Appointment Status](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Verify-Appointment-Status.aspx).
+> Note: If customers request the status of a scheduled appointment or missed appointment, refer to [Verifiy Appointment Status](//OLEVerify-Appointment-Status.aspx).
 
-> Note: If customer mentions the customer of record is deceased, refer to [Customer of Record is Deceased](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Customer-of-Record-is-Deceased.aspx).
+> Note: If customer mentions the customer of record is deceased, refer to [Customer of Record is Deceased](//OLECustomer-of-Record-is-Deceased.aspx).
 
 ## Turn On Frequently Asked Questions
 
 ### Can a Turn On request be created by anyone other than customer of record?
 
-No. Only customer of record or related contract customer (Y, Y) can request a Turn On. Refer to [Customer Confidentiality](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Customer-Confidentiality.aspx).
+No. Only customer of record or related contract customer (Y, Y) can request a Turn On. Refer to [Customer Confidentiality](//OLECustomer-Confidentiality.aspx).
 
 ### If Wanted Date for an in-progress Turn Off/On is changed to a date more than 2 days from the Wanted Date, will the status change to pending?
 
@@ -73,11 +75,11 @@ No. A new customer record must be created as part of the Turn On.
 
 Examples:
 
-- Customer record exists for WPS and customer is requesting service for UMERC (WPS) and vice versa.
-- Customer record exists for NSG and customer is requesting service for PGL and vice versa.
-- Customer record exists for MERC and customer is requesting service for MGU and vice versa.
-- Customer record exists for UMERC (WE) and customer is requesting service for UMERC (WPS) and vice versa.
-- Customer record exists for WE and customer is requesting service for WPS and vice versa.
+* Customer record exists for WPS and customer is requesting service for UMERC (WPS) and vice versa.
+* Customer record exists for NSG and customer is requesting service for PGL and vice versa.
+* Customer record exists for MERC and customer is requesting service for MGU and vice versa.
+* Customer record exists for UMERC (WE) and customer is requesting service for UMERC (WPS) and vice versa.
+* Customer record exists for WE and customer is requesting service for WPS and vice versa.
 
 When the new customer record is created, enter a comment indicating the utility for which the record was created in the Alert attribute field.
 
@@ -85,75 +87,73 @@ When the new customer record is created, enter a comment indicating the utility 
 
 ### Do technicians carry ladders to light overhead and/or rooftop heating units?
 
-- MERC only: Technicians do not carry ladders but will use them to light overhead heating units.
-    - Ladders must be 6 feet or less and require three points of contact at all times.
-    - Note: If higher than six feet, special arrangements must be made.
-    - Technicians do not light rooftop heating units.
-- MGU only: Technicians do not light overhead heating units.
-    - Technicians do not carry ladders and will not use customer-provided ladders.
+* MERC only: Technicians do not carry ladders but will use them to light overhead heating units.
+  * Ladders must be 6 feet or less and require three points of contact at all times.
+  * Note: If higher than six feet, special arrangements must be made.
+  * Technicians do not light rooftop heating units.
+* MGU only: Technicians do not light overhead heating units.
+  * Technicians do not carry ladders and will not use customer-provided ladders.
 
 ## Process
 
 ### 1. Locate requested service address.
 
-1. [Locate a Contract](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/locate-a-contract.aspx).
+1. [Locate a Contract](//OLElocate-a-contract.aspx).
 2. Locate the premise the customer is moving to by address information.
 
 > Note: Select the ACTIVE or most recent finalled contract to issue the Turn On.
 
-3. Identify the status of the meter or meters.
-4. If the meter is INACTIVE, ask customer when they accept responsibility and select the customer's responsibility date.
+1. Identify the status of the meter or meters.
+2. If the meter is INACTIVE, ask customer when they accept responsibility and select the customer's responsibility date.
 
 > Scripting: "What date is your lease/ownership effective?" or "What date will you be responsible for the service?"
 
-5. If there is no meter, refer to [Install Meter No Active Contract](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Install-Meter--No-Active-Contract-Exists.aspx).
+1. If there is no meter, refer to [Install Meter No Active Contract](//OLEInstall-Meter--No-Active-Contract-Exists.aspx).
 
-> Note: Agents not trained to handle new service calls should [consult](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Genesys-Cloud-Phone-Functions.aspx) calls to the MERC NSI or MGU NSI directory or speed dial.
+> Note: Agents not trained to handle new service calls should [consult](//OLEGenesys-Cloud-Phone-Functions.aspx) calls to the MERC NSI or MGU NSI directory or speed dial.
 
-6. New Service hours of operation are:
-    - MERC only: Monday - Friday, 8 a.m. - 5 p.m. CT.
-    - MGU only: Monday - Friday, 8 a.m. - 5 p.m. ET.
-7. If customers call after hours of operation, advise: "The hours of operations for the New Service Installation department are 8 a.m. - 5 p.m. Monday through Friday. You can submit your request online or I can submit the request for a callback during normal business hours."
-8. If the customer opts for a callback, fill out the [MERC/MGU NSI Inquiries](https://teams.wecenergygroup.com/Depts/CSO_CS/CCC/Lists/MERCMGU%20NSI%20Inquiries/AllItems.aspx) form.
-9. Verify the electric meter is active at the residence. Gas Mechanics cannot unseal electric utility company meters and need electric active to relight appliances and perform safety inspections.
-10. If the account is assigned a credit rep, view the Assigned to Credit Rep attribute and:
-    - Review notes and alerts.
-    - If assigned to an individual, warm transfer or consult to the assigned credit rep.
-    - If assigned to Sr Coll Specialist, do not transfer. Continue with process.
-11. MERC only: Determine if the account is a Farm Tap. If yes, inform the customer they are a self-read customer, then proceed with the Turn On.
+1. New Service hours of operation are:
+   * MERC only: Monday - Friday, 8 a.m. - 5 p.m. CT.
+   * MGU only: Monday - Friday, 8 a.m. - 5 p.m. ET.
+2. If customers call after hours of operation, advise: "The hours of operations for the New Service Installation department are 8 a.m. - 5 p.m. Monday through Friday. You can submit your request online or I can submit the request for a callback during normal business hours."
+3. If the customer opts for a callback, fill out the [MERC/MGU NSI Inquiries](https://teams.wecenergygroup.com/Depts/CSO_CS/CCC/Lists/MERCMGU%20NSI%20Inquiries/AllItems.aspx) form.
+4. Verify the electric meter is active at the residence. Gas Mechanics cannot unseal electric utility company meters and need electric active to relight appliances and perform safety inspections.
+5. If the account is assigned a credit rep, view the Assigned to Credit Rep attribute and:
+   * Review notes and alerts.
+   * If assigned to an individual, warm transfer or consult to the assigned credit rep.
+   * If assigned to Sr Coll Specialist, do not transfer. Continue with process.
+6. MERC only: Determine if the account is a Farm Tap. If yes, inform the customer they are a self-read customer, then proceed with the Turn On.
 
-> Note: Identify Farm Tap customers in Open-cIS by confirming one or more of the following:
->
-> - Farm Tap premise attribute is set to Yes.
-> - Self-Read contract attribute is set to Yes.
-> - Offering lists [Farm Tap](https://ole.wecenergygroup.com/sites/OLE/OLEV2/PublishingImages/Farm%20Tap%20Offering.png).
+> Note: Identify Farm Tap customers in Open-cIS by confirming one or more of the following\:Farm Tap premise attribute is set to Yes.
+> Self-Read contract attribute is set to Yes.
+> Offering lists [Farm Tap](https://ole.wecenergygroup.com/sites/OLE/OLEV2/PublishingImages/Farm%20Tap%20Offering.png).
 
-12. If the account is a Farm Tap, when the Turn On is complete, the new account must have the [Self Read](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Self-Read-Meter.aspx) attribute set.
+1. If the account is a Farm Tap, when the Turn On is complete, the new account must have the [Self Read](//OLESelf-Read-Meter.aspx) attribute set.
 
 > Note: This initiates Open-cIS to send self-read communications.
 
-13. Verify if the account is on Large Volume Gas Transportation (LVGT) by viewing the Transportation Status Type attribute on the Contract Overview window or the Offering field on the Services tab.
-    - If LVGT, transfer the call to the Account Manager and exit the procedure.
-    - If not LVGT, proceed to Step 2.
+1. Verify if the account is on Large Volume Gas Transportation (LVGT) by viewing the Transportation Status Type attribute on the Contract Overview window or the Offering field on the Services tab.
+   * If LVGT, transfer the call to the Account Manager and exit the procedure.
+   * If not LVGT, proceed to Step 2.
 
 ### 2. Determine if existing customer.
 
 > Note: Link customer to existing contracts whenever possible.
 
-1. [Locate a Contract](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/locate-a-contract.aspx) by customer information to determine if the customer has had an account in their name.
-    - Request the customer's full legal name, including middle initial, and social security number (SSN) or Tax ID number.
-2. [Locate a Customer](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/locate-a-customer.aspx), if customer is not located via contract search.
+1. [Locate a Contract](//OLElocate-a-contract.aspx) by customer information to determine if the customer has had an account in their name.
+   * Request the customer's full legal name, including middle initial, and social security number (SSN) or Tax ID number.
+2. [Locate a Customer](//OLElocate-a-customer.aspx), if customer is not located via contract search.
 
 > Note: Customer search locates related customers on a contract or owners that have never had service in their name as a primary customer.
 
-3. When searching:
-    - Ask applicant if they ever had service and where, to attempt to locate the record.
-    - Check the Include Related checkbox.
-    - Search by social security number or Tax ID number first.
+1. When searching:
+   * Ask applicant if they ever had service and where, to attempt to locate the record.
+   * Check the Include Related checkbox.
+   * Search by social security number or Tax ID number first.
 
-> Note: If a customer record is located with a different last name but the same first name, ask whether the customer had a legal name change. If yes, change the last name. Refer to [Name Change Request](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Name-Change-Requests.aspx). POSID - Enrollment Verification step must be performed as part of the Contract Application, regardless of customer type.
+> Note: If a customer record is located with a different last name but the same first name, ask whether the customer had a legal name change. If yes, change the last name. Refer to [Name Change Request](//OLEName-Change-Requests.aspx). POSID - Enrollment Verification step must be performed as part of the Contract Application, regardless of customer type.
 
-4. If no customer record is located with SSN or Tax ID, use wildcard (*) to search by name.
+1. If no customer record is located with SSN or Tax ID, use wildcard (\*) to search by name.
 
 If a customer record exists:
 
@@ -161,224 +161,227 @@ If a customer record exists:
 
 1. If multiple customer numbers are returned, select the customer number with the most accounts or sequences.
 2. Review the list returned to determine whether the customer has active accounts.
-    - If customer has active accounts, determine whether a Turn Off order is needed for transfer service. If yes, refer to [Transfer Service](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Transfer-Service.aspx).
-    - If no active accounts exist, select the highest-sequence account and view the Turn Off date on the Services tab.
-3. If the account is going into a customer's personal name, determine and make note of [customer type](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Contract-Application.aspx).
+   * If customer has active accounts, determine whether a Turn Off order is needed for transfer service. If yes, refer to [Transfer Service](//OLETransfer-Service.aspx).
+   * If no active accounts exist, select the highest-sequence account and view the Turn Off date on the Services tab.
+3. If the account is going into a customer's personal name, determine and make note of [customer type](//OLEContract-Application.aspx).
 
 > Note: The bypasses listed do not apply to accounts in the name of legal entities such as LLC, CORP, INC, LTD, or LLP.
 
-4. Verify identification currently on file. Refer to [Verification Guidelines](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/verification-guidelines.aspx).
-5. [Modify Customer Information](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Modify-Customer-Information.aspx).
-6. Update the following required information:
-    - Full legal name, including middle initial.
-    - Previous address, using a physical address and not a P.O. Box.
-    - Enter the address in the Previous Address, Previous City Address, Previous State Address, and Previous Zip Code attribute fields.
+1. Verify identification currently on file. Refer to [Verification Guidelines](//OLEverification-guidelines.aspx).
+2. [Modify Customer Information](//OLEModify-Customer-Information.aspx).
+3. Update the following required information:
+   * Full legal name, including middle initial.
+   * Previous address, using a physical address and not a P.O. Box.
+   * Enter the address in the Previous Address, Previous City Address, Previous State Address, and Previous Zip Code attribute fields.
 
-> Note: If the customer provides a foreign address, leave those fields blank and add previous address details in a [contract note](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Add-a-Note.aspx).
+> Note: If the customer provides a foreign address, leave those fields blank and add previous address details in a [contract note](//OLEAdd-a-Note.aspx).
 
-7. If missing, attempt to gather other forms of acceptable identification information from the verified customer.
+1. If missing, attempt to gather other forms of acceptable identification information from the verified customer.
 
-> Note: Do not modify existing information for the following:
->
-> - Social Security number or last four digits
-> - Date of birth
-> - Valid driver's license and issuing state or state-issued ID and issuing state
+> Note: Do not modify existing information for the following\:Social Security number or last four digits
+> Date of birth
+> Valid driver's license and issuing state or state-issued ID and issuing state
 
-8. Update Contact Methods. Refer to [Telephone Number and E-mail Verification](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Telephone-Number-and-E-mail-Verification.aspx).
-    - Verify or update phone numbers.
-    - Required: Ensure there is a default phone number listed. If no number exists or the customer does not want a number listed, enter all 9s.
-    - Request or update e-mail address.
-9. Make note of the customer number for when creating the Turn On order.
-10. Make note of any collectible debt the customer owes and the contract number. This includes any past due or charge-off balances incurred within the last six years. This information is used as part of the Contract Application.
-11. Review converted accounts with a zero balance and Bad Debt check mark to determine whether there is a bad debt account balance within the last six years that must be paid or transferred.
-12. Proceed to Step 3.
+1. Update Contact Methods. Refer to [Telephone Number and E-mail Verification](//OLETelephone-Number-and-E-mail-Verification.aspx).
+   * Verify or update phone numbers.
+   * Required: Ensure there is a default phone number listed. If no number exists or the customer does not want a number listed, enter all 9s.
+   * Request or update e-mail address.
+2. Make note of the customer number for when creating the Turn On order.
+3. Make note of any collectible debt the customer owes and the contract number. This includes any past due or charge-off balances incurred within the last six years. This information is used as part of the Contract Application.
+4. Review converted accounts with a zero balance and Bad Debt check mark to determine whether there is a bad debt account balance within the last six years that must be paid or transferred.
+5. Proceed to Step 3.
 
 If no customer record exists, proceed to Step 4.
 
 ### 3. MGU only: November 1 - March 31, determine if MI WPP customer attribute is set to 65 or older.
 
-1. [View Customer Information](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/view-customer-information.aspx).
+1. [View Customer Information](//OLEview-customer-information.aspx).
 2. If Yes:
-    - [Modify Customer Information](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/modify-customer-information.aspx).
-    - Update Birth date for the customer or related customer who is over 65 years of age, if necessary.
-    - [Modify a Contract Attribute](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/modify-a-contract-attribute.aspx).
-    - Select Yes from the MI Protection Plan drop-down list.
+   * [Modify Customer Information](//OLEmodify-customer-information.aspx).
+   * Update Birth date for the customer or related customer who is over 65 years of age, if necessary.
+   * [Modify a Contract Attribute](//OLEmodify-a-contract-attribute.aspx).
+   * Select Yes from the MI Protection Plan drop-down list.
 3. Proceed to Step 4.
 
 ### 4. Determine if an in-progress Turn Off order exists.
 
-- If Turn Off date is in the past or for today:
-    - View order history to determine the status of the order. Refer to [View an Order](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/View-an-Order.aspx).
-    - If meter is sealed, proceed to Step 5.
-    - If meter is not sealed and has been unassigned by Dispatch, proceed to Step 6.
-- If Turn Off is scheduled for an earlier date than the Turn On request:
-    - Example: Turn Off pending for 2/24, customer requests Turn On for 2/28.
-    - Proceed to Step 5.
-- If Turn Off is scheduled within 2 days of the Turn On request, or more than 2 days after the Turn On request:
-    - Example: Turn Off for 2/28, customer requests Turn On for 2/26.
-    - Example: Turn Off pending for 2/28, customer requests Turn On for 2/21.
-    - Proceed with Turn On for the same day as Turn Off.
+* If Turn Off date is in the past or for today:
+  * View order history to determine the status of the order. Refer to [View an Order](//OLEView-an-Order.aspx).
+  * If meter is sealed, proceed to Step 5.
+  * If meter is not sealed and has been unassigned by Dispatch, proceed to Step 6.
+* If Turn Off is scheduled for an earlier date than the Turn On request:
+  * Example: Turn Off pending for 2/24, customer requests Turn On for 2/28.
+  * Proceed to Step 5.
+* If Turn Off is scheduled within 2 days of the Turn On request, or more than 2 days after the Turn On request:
+  * Example: Turn Off for 2/28, customer requests Turn On for 2/26.
+  * Example: Turn Off pending for 2/28, customer requests Turn On for 2/21.
+  * Proceed with Turn On for the same day as Turn Off.
 
 > Note: If the Turn On order is held, Turn Off will be executed following the normal process.
 
-    - Advise customer that a Turn Off is scheduled for the applicable date and service will start in their name on that same date.
-    - Proceed to Step 5.
-- If no Turn Off order exists, proceed to Step 5.
+* Advise customer that a Turn Off is scheduled for the applicable date and service will start in their name on that same date.
+* Proceed to Step 5.
+* If no Turn Off order exists, proceed to Step 5.
 
 ### 5. Determine if meters need to be unsealed.
 
 1. Review the premise to determine whether meters need to be unsealed.
 2. If Yes, advise the customer of the following:
-    - We must schedule an appointment to gain access to the gas meter and appliances in order to unseal the gas meter, relight pilots, and complete required inspections.
-    - Verify the electric meter is active at the residence. Gas Mechanics cannot unseal other electric utility company meters and need electric utility active to relight appliances and perform safety inspections.
-    - Verify meter location. Refer to [View a Premise](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/View-a-Premise.aspx).
+   * We must schedule an appointment to gain access to the gas meter and appliances in order to unseal the gas meter, relight pilots, and complete required inspections.
+   * Verify the electric meter is active at the residence. Gas Mechanics cannot unseal other electric utility company meters and need electric utility active to relight appliances and perform safety inspections.
+   * Verify meter location. Refer to [View a Premise](//OLEView-a-Premise.aspx).
 3. If the meter is on the roof, advise:
-    - MERC only: Technicians do not carry ladders but will use them to light overhead heating units.
-        - Ladder must be 6 feet or less and requires three points of contact at all times.
-    - Note: If higher than six feet, special arrangements must be made.
-        - Technicians do not light rooftop heating units or access the roof to turn on the meter. An HVAC must be present.
-    - MGU only: Technicians do not light overhead heating units.
-        - Technicians do not carry ladders and will not use customer-provided ladders.
-    - Technicians do not access the roof to turn on the meter. An HVAC must be present.
+   * MERC only: Technicians do not carry ladders but will use them to light overhead heating units.
+     * Ladder must be 6 feet or less and requires three points of contact at all times.
+   * Note: If higher than six feet, special arrangements must be made.
+     * Technicians do not light rooftop heating units or access the roof to turn on the meter. An HVAC must be present.
+   * MGU only: Technicians do not light overhead heating units.
+     * Technicians do not carry ladders and will not use customer-provided ladders.
+   * Technicians do not access the roof to turn on the meter. An HVAC must be present.
 4. Access requirements:
-    - MGU only: Requires someone 18 years of age or older to provide access to the property.
-    - MERC only: Someone 18 years of age or older must provide access to the property, or one of the following must be available:
-        - House left unlocked
-    - Key left for technician
-        - Meet a neighbor
-    - Get a key from a neighbor
-        - Garage door keyless entry code
+   * MGU only: Requires someone 18 years of age or older to provide access to the property.
+   * MERC only: Someone 18 years of age or older must provide access to the property, or one of the following must be available:
+     * House left unlocked
+   * Key left for technician
+     * Meet a neighbor
+   * Get a key from a neighbor
+     * Garage door keyless entry code
 5. If the customer who requested meters sealed is requesting unseal within 12 months, reconnection charges are assessed by Billing for each meter. MERC only: customer charges are back billed for the months the meter was sealed.
 6. If meters need unsealed:
-    - MERC only: Proceed to Step 6.
-    - MGU only: Proceed to Step 7.
+   * MERC only: Proceed to Step 6.
+   * MGU only: Proceed to Step 7.
 7. If meters do not need unsealed:
-    - MERC only: Proceed to Step 6.
-    - MGU only: Proceed to Step 7.
+   * MERC only: Proceed to Step 6.
+   * MGU only: Proceed to Step 7.
 
 ### 6. MERC only: If residential, determine if the current account has ServiceChoice.
 
-- If No, proceed to Step 7.
-- If Yes:
-    - Issue a Turn Off for the current customer's ServiceChoice plan. Refer to the Modify or Remove Plan section of [Create, Modify, and End ServiceChoice Program](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/create,%20modify%20and%20end%20servicechoice%20program.aspx#id3).
-    - Proceed to Step 7.
+* If No, proceed to Step 7.
+* If Yes:
+  * Issue a Turn Off for the current customer's ServiceChoice plan. Refer to the Modify or Remove Plan section of [Create, Modify, and End ServiceChoice Program](//OLEcreate,%20modify%20and%20end%20servicechoice%20program.aspx#id3).
+  * Proceed to Step 7.
 
 ### 7. Issue Turn On order.
 
 > Note: If there is an open Backdated Turn On/Off work item, cancel the future-dated Turn On, issue the Turn On for the new party, and update the work item to indicate the Turn On was cancelled.
 
 1. On the Orders tab, select issue Turn On.
-    - The Issue Orders window displays.
-    - Select Turn On/Off from Order category, if necessary.
-    - Select Turn On from Order type, if necessary.
+   * The Issue Orders window displays.
+   * Select Turn On/Off from Order category, if necessary.
+   * Select Turn On from Order type, if necessary.
 
 > Note: If the message "The Adverse Conditions reason is Name Switching, Pending Non-Pay Shut off or Other" displays, complete the follow-up steps on the source page.
 
-    - Select Customer Request from Reason, if necessary.
-    - Select Apply, if necessary.
-2. Select the ellipsis (...) button next to the Customer field.
-    - Search for an existing customer.
-    - Or select Add to create a new customer. Refer to [Create a New Customer Record](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Create-a-New-Customer-Record.aspx).
-    - The Customer Details window displays.
-3. Select the appropriate option from Contract Type.
+* Select Customer Request from Reason, if necessary.
+* Select Apply, if necessary.
+
+1. Select the ellipsis (...) button next to the Customer field.
+   * Search for an existing customer.
+   * Or select Add to create a new customer. Refer to [Create a New Customer Record](//OLECreate-a-New-Customer-Record.aspx).
+   * The Customer Details window displays.
+2. Select the appropriate option from Contract Type.
 
 > Note: This selection should match the Contract Type from the Contract Details window.
 
-4. Select New.
-    - The Contract Application window displays.
-    - Refer to [Contract Application](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/contract-application.aspx).
+1. Select New.
+   * The Contract Application window displays.
+   * Refer to [Contract Application](//OLEcontract-application.aspx).
 
 > Note: All steps of the Contract Application must be performed. At the end of the process, refer to Step 12 to advise customer of required follow-up actions.
 
-    - Select Apply.
-5. Select the appropriate Service Type or Service Types on the Services tab and discuss any existing programs or services.
-    - Select the AEP service checkbox, if applicable. Refer to [AEP, CAP, NAS](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/AEP,%20CAP,%20NAS%20Overview.aspx) for more information on AEP billed amount and duration.
-    - Select the ServiceChoice box if the customer chooses to enroll at the time of Turn On, if listed.
-    - Select Apply.
-6. Select the Scheduling tab.
-    - Select the Plus (+) for each Service Type to display details.
-7. Enter the following in the Wanted Date field:
-    - Ask customer when they accept responsibility and select the customer's responsibility date.
+* Select Apply.
+
+1. Select the appropriate Service Type or Service Types on the Services tab and discuss any existing programs or services.
+   * Select the AEP service checkbox, if applicable. Refer to [AEP, CAP, NAS](//OLEAEP,%20CAP,%20NAS%20Overview.aspx) for more information on AEP billed amount and duration.
+   * Select the ServiceChoice box if the customer chooses to enroll at the time of Turn On, if listed.
+   * Select Apply.
+2. Select the Scheduling tab.
+   * Select the Plus (+) for each Service Type to display details.
+3. Enter the following in the Wanted Date field:
+   * Ask customer when they accept responsibility and select the customer's responsibility date.
 
 > Scripting: "What date is your lease/ownership effective?" or "What date will you be responsible for the service?"
 
-    - Unseal meter only: Once the date is provided, inform customer: "In order to turn on service, we need to send a service technician to your location. I can provide available dates and times for this request."
-    - If backdated Turn On request or meter is inactive, refer to [Backdated Turn On or Turn Off](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/backdated-turn-on-or-turn-off.aspx).
-8. Allow [Completion Method](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Orders-Functionality-Overview.aspx) to default.
-9. [Schedule an Order](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Schedule-an-Order.aspx), if applicable.
+* Unseal meter only: Once the date is provided, inform customer: "In order to turn on service, we need to send a service technician to your location. I can provide available dates and times for this request."
+* If backdated Turn On request or meter is inactive, refer to [Backdated Turn On or Turn Off](//OLEbackdated-turn-on-or-turn-off.aspx).
+
+1. Allow [Completion Method](//OLEOrders-Functionality-Overview.aspx) to default.
+2. [Schedule an Order](//OLESchedule-an-Order.aspx), if applicable.
 
 > Note: If error message "ERROR: #11008 - Latitude and longitude is required to search for available appointments." is received, complete the follow-up steps on the source page.
 
-    - For Grain Dryer, schedule an all-day appointment.
+* For Grain Dryer, schedule an all-day appointment.
 
 > Note: The customer does not need to be present.
 
-10. Select Apply.
-11. Select the Contact tab and update the following:
-    - Enter requester name in Requester By field.
-        - Enter requestor contact number in Contact Phone field.
-12. Advise customer of the following:
-    - Field visit only:
-            - "For your safety and to ensure a safe working environment for our serviceperson; please secure pets and ensure the serviceperson has a clear path to the premise, meter and appliances."
-            - "The technician will attempt to reach you while en route. What is the best contact number to reach you?"
-    - Auto Complete only:
-            - "A service person will not visit your premises to complete this request."
-13. Enter the following in the Instructions field:
+1. Select Apply.
+2. Select the Contact tab and update the following:
+   * Enter requester name in Requester By field.
+     * Enter requestor contact number in Contact Phone field.
+3. Advise customer of the following:
+   * Field visit only:
+     * "For your safety and to ensure a safe working environment for our serviceperson; please secure pets and ensure the serviceperson has a clear path to the premise, meter and appliances."
+     * "The technician will attempt to reach you while en route. What is the best contact number to reach you?"
+   * Auto Complete only:
+     * "A service person will not visit your premises to complete this request."
+4. Enter the following in the Instructions field:
 
-> Note: Do not use < > *& - + = ' " # • / \ or the Enter key or hard return in order instructions because the text displays corrupted and cannot be read in PCAD.
+> Note: Do not use `< > *& - + = ' " # • / \` or the Enter key or hard return in order instructions because the text displays corrupted and cannot be read in PCAD.
 
-    - Information concerning the meter to unseal, if there is more than one meter at the premise.
-        - Example: Unseal gas meter number 123456.
-    - Name of person who will be present at the time of unseal or reconnection, if different than the customer of record.
-        - MERC only: If customer will not be present, enter "Customer gives permission for technician to enter home without someone present."
-            - Include specific direction on how to access the premise without someone being present.
-    - How to gain access to the premise, meter, and gas appliances.
-        - Additional information that may be helpful to the technician.
-14. Select the Order Attributes tab and enter or select the appropriate Value for the following:
-    - Primary Residence - Order Issue
-        - Send Letter, if applicable
+* Information concerning the meter to unseal, if there is more than one meter at the premise.
+  * Example: Unseal gas meter number 123456.
+* Name of person who will be present at the time of unseal or reconnection, if different than the customer of record.
+  * MERC only: If customer will not be present, enter "Customer gives permission for technician to enter home without someone present."
+    * Include specific direction on how to access the premise without someone being present.
+* How to gain access to the premise, meter, and gas appliances.
+  * Additional information that may be helpful to the technician.
+
+1. Select the Order Attributes tab and enter or select the appropriate Value for the following:
+   * Primary Residence - Order Issue
+     * Send Letter, if applicable
 
 > Note: Send New Customer Notification Letter any time a related customer is responsible for the bill.
 
-15. Select the Quick Launch tab.
-    - [Add a Mailing Address](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/add-a-mailing-address.aspx), if mailing address is different than the service address.
+1. Select the Quick Launch tab.
+   * [Add a Mailing Address](//OLEadd-a-mailing-address.aspx), if mailing address is different than the service address.
 
 > Note: Add mailing address while on the Issue Turn On window, including landlords with an owner agreement.
 
-    - Select Related Customer Maint to add a related customer, if applicable. Proceed to Step 3 of [Customer Confidentiality](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/customer-confidentiality.aspx).
-        - Select Add on the Contract Related Customer Maintenance window.
-            - The Customer Search window displays.
-    - Select Maintain Contract, then select Launch.
-        - If DBA name was obtained for a Sole Proprietorship or Partnership, enter the appropriate Value for the following attributes:
-            - Bill Print Detail Name: <DBA name>
-            - Doing Business As Name: <DBA name>
-            - Meter reading customer note: DBA <name>
-    - Commercial only: Update Power Billing attribute.
-            - Power Billing: Yes
-    - Determine if Customer is Low Income attribute is set to Yes on a previous contract since 10/1 of the current heating season (10/1 - 9/30 of each year).
-            - On the Contract tab, select Contract Maintenance.
-            - If the attribute is set to Yes at the prior contract:
-                - Select Maintain Contract, then select Launch.
-                - The Modify Contract window displays.
-                - Select Yes from the Customer is Low Income attribute field.
-                - Select OK.
-16. Select the Owner Agreement History tab and determine whether the contract has an owner agreement.
-    - Ask the caller whether they are renting or purchasing the property.
-        - If there is an owner agreement, verify whether the information is correct.
-            - If the information is not correct and the requester is the new owner:
-                - [Delete the owner agreement](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Delete-an-Owner-Agreement.aspx).
-                - Ask the new owner whether they want to establish an owner agreement. Refer to [Owner Agreement](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Owner-Agreement.aspx).
-            - If the information is correct and the current owner will occupy the property and it is not used as a rental:
-                - [Delete the owner agreement](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Delete-an-Owner-Agreement.aspx).
-            - If the information is not correct and the requester is a renter:
-                - Ask: "Who are you renting from?"
-                - [Add a Premise Note](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Add-a-Note.aspx) with the owner details.
-            - If the information is correct, no action is needed.
-    - If there is no owner agreement:
-            - If caller is a renter, ask: "Who are you renting from?"
-            - [Add a Premise Note](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Add-a-Note.aspx) with the owner details.
-17. Repeat the address and city or town back to the customer to verify the order is created for the correct address.
-18. Select OK.
+* Select Related Customer Maint to add a related customer, if applicable. Proceed to Step 3 of [Customer Confidentiality](//OLEcustomer-confidentiality.aspx).
+  * Select Add on the Contract Related Customer Maintenance window.
+    * The Customer Search window displays.
+* Select Maintain Contract, then select Launch.
+  * If DBA name was obtained for a Sole Proprietorship or Partnership, enter the appropriate Value for the following attributes:
+    * Bill Print Detail Name: `<DBA name>`
+    * Doing Business As Name: `<DBA name>`
+    * Meter reading customer note: DBA `<name>`
+* Commercial only: Update Power Billing attribute.
+  * Power Billing: Yes
+* Determine if Customer is Low Income attribute is set to Yes on a previous contract since 10/1 of the current heating season (10/1 - 9/30 of each year).
+  * On the Contract tab, select Contract Maintenance.
+  * If the attribute is set to Yes at the prior contract:
+    * Select Maintain Contract, then select Launch.
+    * The Modify Contract window displays.
+    * Select Yes from the Customer is Low Income attribute field.
+    * Select OK.
+
+1. Select the Owner Agreement History tab and determine whether the contract has an owner agreement.
+   * Ask the caller whether they are renting or purchasing the property.
+     * If there is an owner agreement, verify whether the information is correct.
+       * If the information is not correct and the requester is the new owner:
+         * [Delete the owner agreement](//OLEDelete-an-Owner-Agreement.aspx).
+         * Ask the new owner whether they want to establish an owner agreement. Refer to [Owner Agreement](//OLEOwner-Agreement.aspx).
+       * If the information is correct and the current owner will occupy the property and it is not used as a rental:
+         * [Delete the owner agreement](//OLEDelete-an-Owner-Agreement.aspx).
+       * If the information is not correct and the requester is a renter:
+         * Ask: "Who are you renting from?"
+         * [Add a Premise Note](//OLEAdd-a-Note.aspx) with the owner details.
+       * If the information is correct, no action is needed.
+   * If there is no owner agreement:
+     * If caller is a renter, ask: "Who are you renting from?"
+     * [Add a Premise Note](//OLEAdd-a-Note.aspx) with the owner details.
+2. Repeat the address and city or town back to the customer to verify the order is created for the correct address.
+3. Select OK.
 
 > Note: The following message displays only if the services are currently being billed: "The following services are currently being billed in the indicated contract. Issuing Turn On order will create a Turn Off order for these services. Do you wish to continue?"
 
@@ -395,8 +398,8 @@ If no customer record exists, proceed to Step 4.
 
 ### 9. If a non-residential premise, verify and document nature of customer's business.
 
-1. Locate the customer's new account. Refer to [Locate a Contract](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/locate-a-contract.aspx).
-2. Refer to [Request NAICS Information](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Request-NAICS-Information.aspx).
+1. Locate the customer's new account. Refer to [Locate a Contract](//OLElocate-a-contract.aspx).
+2. Refer to [Request NAICS Information](//OLERequest-NAICS-Information.aspx).
 
 ### 10. Customer has transferrable debt within the last six years.
 
@@ -405,59 +408,59 @@ If no customer record exists, proceed to Step 4.
 > Note: Business customers in a business name with more than 10 accounts will not be held for debt. Advise these customers of the debt and bypass Internal Debt Search.
 
 1. Advise customer of transferrable debt.
-2. Offer BillMatrix to make payment, if applicable. Refer to [Quick Payment Process](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/quick-payment-process.aspx).
-3. If unable to make a payment, advise customer that the balance of <amount> is transferred to their active account and is reflected on the first bill.
+2. Offer BillMatrix to make payment, if applicable. Refer to [Quick Payment Process](//OLEquick-payment-process.aspx).
+3. If unable to make a payment, advise customer that the balance of `<amount>` is transferred to their active account and is reflected on the first bill.
 4. Encourage the customer to make payments and, if a balance remains after the first bill is received, to contact the utility to establish a payment arrangement.
-5. [Add a Contract Note](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/add-a-note.aspx), including the following in the New Remarks field:
-    - Advised customer of <amount> past due or written off.
-    - Any payment arrangements discussed with the customer.
-6. [Add a Note Follow-up](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/add-a-note-follow-up.aspx) to transfer collectible debt in bad debt status or assigned to a collection agency, if applicable.
-    - Type: Credit Call F/Up - Residential
-    - Assign To Work Group: Credit
-    - Defer Until Date: Next business day
-    - Remark:
-        - Transfer from <bad debt/assigned contract number> to <new contract number>
-    - The related or responsible customer and age of bad debt have been checked.
-        - If business customer has more than 10 accounts and is not held for debt, document that customer was advised of debt and order was not held.
-7. If debt on a finalled contract is not in bad debt status or assigned to a collection agency, [Direct Transfer a Finalled Contract Balance](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Direct-Transfer-a-Finalled-Contract-Balance.aspx).
+5. [Add a Contract Note](//OLEadd-a-note.aspx), including the following in the New Remarks field:
+   * Advised customer of `<amount>` past due or written off.
+   * Any payment arrangements discussed with the customer.
+6. [Add a Note Follow-up](//OLEadd-a-note-follow-up.aspx) to transfer collectible debt in bad debt status or assigned to a collection agency, if applicable.
+   * Type: Credit Call F/Up - Residential
+   * Assign To Work Group: Credit
+   * Defer Until Date: Next business day
+   * Remark:
+     * Transfer from `<bad debt/assigned contract number>` to `<new contract number>`
+   * The related or responsible customer and age of bad debt have been checked.
+     * If business customer has more than 10 accounts and is not held for debt, document that customer was advised of debt and order was not held.
+7. If debt on a finalled contract is not in bad debt status or assigned to a collection agency, [Direct Transfer a Finalled Contract Balance](//OLEDirect-Transfer-a-Finalled-Contract-Balance.aspx).
 
 ### 11. Discuss available programs, if eligible.
 
-- MERC ServiceChoice:
-    - ServiceChoice trained: Offer Service Choice.
+* MERC ServiceChoice:
+  * ServiceChoice trained: Offer Service Choice.
 
 > Scripting: "Since you're moving, it's the perfect time to set yourself up with peace of mind in your new home. Minnesota Energy Resources offers our Service Choice Appliance Protection Program, which covers repair and inspection services for your HVAC, gas, and electric appliances. Moving is already stressful - this plan takes one big worry off your plate. With multiple plan options, you can choose the right level of protection for your new space. Would you like me to walk you through the options to help make your move a little easier?"
 
-    - Refer to ServiceChoice Appliance Repair Plan.
-    - Not ServiceChoice trained: Offer Service Choice and transfer to a ServiceChoice Specialist.
+* Refer to ServiceChoice Appliance Repair Plan.
+* Not ServiceChoice trained: Offer Service Choice and transfer to a ServiceChoice Specialist.
 
 > Scripting: "Since you're moving, it's the perfect time to set yourself up with peace of mind in your new home. Minnesota Energy Resources offers our Service Choice Appliance Protection Program, which covers repair and inspection services for your HVAC, gas, and electric appliances. Moving is already stressful - this plan takes one big worry off your plate. With multiple plan options, you can choose the right level of protection for your new space. Would you like me to transfer you to a ServiceChoice Specialist to walk you through the options to help make your move a little easier?"
 
-- [Summary Billing](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Summary-Billing.aspx)
-- [Solicit Paper-Free Billing](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Solicit-Paper-Free-Billing.aspx)
+* [Summary Billing](//OLESummary-Billing.aspx)
+* [Solicit Paper-Free Billing](//OLESolicit-Paper-Free-Billing.aspx)
 
-> Note: For Transfer of Service, Paper-Free is not displaying on the Transfer Customer window for enrolled customers. Manually establish Paper-Free on the new account. Refer to [Paper-Free Bill](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Paper-Free-Billing.aspx) for enrollment.
+> Note: For Transfer of Service, Paper-Free is not displaying on the Transfer Customer window for enrolled customers. Manually establish Paper-Free on the new account. Refer to [Paper-Free Bill](//OLEPaper-Free-Billing.aspx) for enrollment.
 
-- [Automatic Payment Plan](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Add-Automatic-Payment-Plan-Overview.aspx)
-- Verify tax exemption status. Refer to [Request Tax Exemption Forms](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/request-tax-exemption-forms.aspx).
-- Verify rate and revenue. If a rate change is needed, proceed to [Rate Change at Time of Turn On](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/rate-change-at-turn-on---bsc.aspx).
-- Determine whether the customer is still farming.
-    - If the account is a Farm Tap identified in Step 1, set the Self Read attribute on the new account. Refer to [Self-Read Meter](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Self-Read-Meter.aspx).
-- [Pledge Overview](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Pledge-Overview.aspx)
-- If a customer on an [eligible rate](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/Budget-Billing-Processes.aspx) requests Budget Billing at the time of Turn On:
-    - Advise customer to enroll after the first bill is received by using the auto-enroll bill message.
-    - Along with the Budget Billing Talking Points, share the following message: "Even out your energy bills! Enroll in Budget Billing by paying exactly <amount>, rather than the amount due shown. This will then be your monthly Budget amount. Every six months, your account will be reviewed and your payment may be adjusted to better reflect your actual use."
-    - If the customer insists that Budget Billing be established immediately, [Add a Note Follow-up](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/add-a-note-follow-up.aspx) with the following details:
-        - Type: Note Follow-up
-    - Assign To Work Group: Contact Center
-        - Defer Until Date: One business day after first bill prints
-    - Instructions: Customer requested Budget Billing at time of Turn On; establish once first bill prints.
+* [Automatic Payment Plan](//OLEAdd-Automatic-Payment-Plan-Overview.aspx)
+* Verify tax exemption status. Refer to [Request Tax Exemption Forms](//OLErequest-tax-exemption-forms.aspx).
+* Verify rate and revenue. If a rate change is needed, proceed to [Rate Change at Time of Turn On](//OLErate-change-at-turn-on---bsc.aspx).
+* Determine whether the customer is still farming.
+  * If the account is a Farm Tap identified in Step 1, set the Self Read attribute on the new account. Refer to [Self-Read Meter](//OLESelf-Read-Meter.aspx).
+* [Pledge Overview](//OLEPledge-Overview.aspx)
+* If a customer on an [eligible rate](//OLEBudget-Billing-Processes.aspx) requests Budget Billing at the time of Turn On:
+  * Advise customer to enroll after the first bill is received by using the auto-enroll bill message.
+  * Along with the Budget Billing Talking Points, share the following message: "Even out your energy bills! Enroll in Budget Billing by paying exactly `<amount>`, rather than the amount due shown. This will then be your monthly Budget amount. Every six months, your account will be reviewed and your payment may be adjusted to better reflect your actual use."
+  * If the customer insists that Budget Billing be established immediately, [Add a Note Follow-up](//OLEadd-a-note-follow-up.aspx) with the following details:
+    * Type: Note Follow-up
+  * Assign To Work Group: Contact Center
+    * Defer Until Date: One business day after first bill prints
+  * Instructions: Customer requested Budget Billing at time of Turn On; establish once first bill prints.
 
 ### 12. If application is held, advise customer of actions needed to resolve.
 
-- [Resolve Held Application](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Pages/resolve-held-application.aspx)
+* [Resolve Held Application](//OLEresolve-held-application.aspx)
 
 ## Metadata
 
-- Last Reviewed: 10/10/2025 7:49 AM
-- Document ID: OLEV2-128226294-8064
+* Last Reviewed: 10/10/2025 7:49 AM
+* Document ID: OLEV2-128226294-8064
