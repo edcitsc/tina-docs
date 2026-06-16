@@ -2,6 +2,7 @@
 
 import { CopyPageDropdown } from "@/components/copy-page-dropdown";
 import { BreadCrumbs } from "@/components/docs/breadcrumbs";
+import { DocPageFooter, DocPageHeader } from "@/components/docs/doc-metadata";
 import { useNavigation } from "@/components/docs/layout/navigation-context";
 import { OnThisPage } from "@/components/docs/on-this-page";
 import MarkdownComponentMapping from "@/components/tina-markdown/markdown-component-mapping";
@@ -49,12 +50,12 @@ export default function Document({ props, tinaProps }) {
               data-pagefind-meta="title"
             >
               {documentationData?.title
-                ? documentationData.title.charAt(0).toUpperCase() +
-                  documentationData.title.slice(1)
+                ? documentationData.title.charAt(0).toUpperCase() + documentationData.title.slice(1)
                 : documentationData?.title}
             </h1>
             <CopyPageDropdown className="self-end mb-2 md:mb-0" />
           </div>
+          <DocPageHeader doc={documentationData} />
           {props.hasGithubConfig && <GitHubMetadata />}
 
           {/* CONTENT */}
@@ -63,11 +64,9 @@ export default function Document({ props, tinaProps }) {
             data-tina-field={tinaField(documentationData, "body")}
             className="mt-4 font-body font-light leading-normal tracking-normal"
           >
-            <TinaMarkdown
-              content={documentationData?.body}
-              components={MarkdownComponentMapping}
-            />
+            <TinaMarkdown content={documentationData?.body} components={MarkdownComponentMapping} />
           </div>
+          <DocPageFooter doc={documentationData} />
           {formattedDate && (
             <span className="text-md text-slate-500 font-body font-light">
               {" "}
@@ -79,11 +78,7 @@ export default function Document({ props, tinaProps }) {
       </div>
       {/* DESKTOP TABLE OF CONTENTS */}
       {documentationData?.tocIsHidden ? null : (
-        <div
-          className={
-            "sticky hidden xl:block  top-4 h-fit mx-4 w-64 justify-self-end"
-          }
-        >
+        <div className={"sticky hidden xl:block  top-4 h-fit mx-4 w-64 justify-self-end"}>
           <OnThisPage pageItems={pageTableOfContents} activeids={activeIds} />
         </div>
       )}

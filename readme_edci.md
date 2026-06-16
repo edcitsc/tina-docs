@@ -1,5 +1,21 @@
 # EDCi TinaDocs — Operations Guide
 
+## Running Locally
+
+1. Copy `.env.example` to `.env.local` and fill in the required values (`MONGODB_URI`, `ADO_*`, etc.)
+2. Install dependencies:
+   ```bash
+   pnpm install
+   ```
+3. Start the dev server:
+   ```bash
+   pnpm dev
+   ```
+   - Site: `http://localhost:3000`
+   - CMS admin: `http://localhost:3000/admin`
+
+> The `dev` script runs TinaCMS and Next.js (Turbopack) together. A `predev` check will warn you if the Pagefind index is missing.
+
 ## Scripts
 
 | Command                   | What it does                                                          |
