@@ -16,14 +16,7 @@ last_edited: '2026-06-15T20:40:36.622Z'
 auto_generated: false
 ---
 
-# Turn On MERC MGU
-
-## Applies To
-
-* Utilities: MERC, MGU
-* Audience: Business Solutions Center, Contact Center, Credit - Collections, Field Ops
-
-## Description
+# Description
 
 A Turn On order is issued to initiate billing for a new or existing customer. This request can only be accepted by the customer of record.
 
@@ -33,43 +26,43 @@ A Turn On order is issued to initiate billing for a new or existing customer. Th
 
 > Note: If customer mentions the customer of record is deceased, refer to [Customer of Record is Deceased](//OLECustomer-of-Record-is-Deceased.aspx).
 
-## Turn On Frequently Asked Questions
+# Turn On Frequently Asked Questions
 
-### Can a Turn On request be created by anyone other than customer of record?
+## Can a Turn On request be created by anyone other than customer of record?
 
 No. Only customer of record or related contract customer (Y, Y) can request a Turn On. Refer to [Customer Confidentiality](//OLECustomer-Confidentiality.aspx).
 
-### If Wanted Date for an in-progress Turn Off/On is changed to a date more than 2 days from the Wanted Date, will the status change to pending?
+## If Wanted Date for an in-progress Turn Off/On is changed to a date more than 2 days from the Wanted Date, will the status change to pending?
 
 No. The status remains in progress and the field order reissues when it is within 2 days of the new Wanted Date.
 
-### If all services are not selected when issuing a Turn On order, what happens to the unselected services?
+## If all services are not selected when issuing a Turn On order, what happens to the unselected services?
 
 The unselected services remain in the previous customer's name.
 
 > Example: MERC ServiceChoice continues to bill to the previous customer.
 
-### Realtor or third party calls requesting unseal for home inspection and sealed once inspection is complete.
+## Realtor or third party calls requesting unseal for home inspection and sealed once inspection is complete.
 
 Inform caller to have customer of record contact us to make the request.
 
-### How do I make the premise service active if I cancelled a prior reading and did not select the Active button?
+## How do I make the premise service active if I cancelled a prior reading and did not select the Active button?
 
 Premise Services are active when a turn on is completed and inactive without a turn on. Reissue the Turn On with a completion method of Complete Now Without Dispatch and then complete it. The service then becomes active.
 
-### What does it mean when an error message states services need to be configured while doing a turn on for a new landlord with an offering of Small Coml & Ind Gas?
+## What does it mean when an error message states services need to be configured while doing a turn on for a new landlord with an offering of Small Coml & Ind Gas?
 
 Modify the Power Billing contract attribute to Yes. Rental properties that provide service for more than one unit display this error message.
 
-### There is an In Progress turn on or turn off order and now the customer is requesting the meters either sealed or unsealed.
+## There is an In Progress turn on or turn off order and now the customer is requesting the meters either sealed or unsealed.
 
 If an in-progress order is pending and the customer now wants the meter either sealed or unsealed, create a note follow-up to the back office and include the seal or unseal request in remarks.
 
-### Can an owner agreement be set up by information provided by the tenant?
+## Can an owner agreement be set up by information provided by the tenant?
 
 No. Owner agreements must be set up directly with the landlord.
 
-### If a customer record exists but the customer is requesting service for a different utility, can the same record be used?
+## If a customer record exists but the customer is requesting service for a different utility, can the same record be used?
 
 No. A new customer record must be created as part of the Turn On.
 
@@ -85,7 +78,7 @@ When the new customer record is created, enter a comment indicating the utility 
 
 > Example: "CUST # for UMERC accounts."
 
-### Do technicians carry ladders to light overhead and/or rooftop heating units?
+## Do technicians carry ladders to light overhead and/or rooftop heating units?
 
 * MERC only: Technicians do not carry ladders but will use them to light overhead heating units.
   * Ladders must be 6 feet or less and require three points of contact at all times.
@@ -94,9 +87,9 @@ When the new customer record is created, enter a comment indicating the utility 
 * MGU only: Technicians do not light overhead heating units.
   * Technicians do not carry ladders and will not use customer-provided ladders.
 
-## Process
+# Process
 
-### 1. Locate requested service address.
+## 1. Locate requested service address.
 
 1. [Locate a Contract](//OLElocate-a-contract.aspx).
 2. Locate the premise the customer is moving to by address information.
@@ -136,7 +129,7 @@ When the new customer record is created, enter a comment indicating the utility 
    * If LVGT, transfer the call to the Account Manager and exit the procedure.
    * If not LVGT, proceed to Step 2.
 
-### 2. Determine if existing customer.
+## 2. Determine if existing customer.
 
 > Note: Link customer to existing contracts whenever possible.
 
@@ -193,7 +186,7 @@ If a customer record exists:
 
 If no customer record exists, proceed to Step 4.
 
-### 3. MGU only: November 1 - March 31, determine if MI WPP customer attribute is set to 65 or older.
+## 3. MGU only: November 1 - March 31, determine if MI WPP customer attribute is set to 65 or older.
 
 1. [View Customer Information](//OLEview-customer-information.aspx).
 2. If Yes:
@@ -203,7 +196,7 @@ If no customer record exists, proceed to Step 4.
    * Select Yes from the MI Protection Plan drop-down list.
 3. Proceed to Step 4.
 
-### 4. Determine if an in-progress Turn Off order exists.
+## 4. Determine if an in-progress Turn Off order exists.
 
 * If Turn Off date is in the past or for today:
   * View order history to determine the status of the order. Refer to [View an Order](//OLEView-an-Order.aspx).
@@ -223,7 +216,7 @@ If no customer record exists, proceed to Step 4.
 * Proceed to Step 5.
 * If no Turn Off order exists, proceed to Step 5.
 
-### 5. Determine if meters need to be unsealed.
+## 5. Determine if meters need to be unsealed.
 
 1. Review the premise to determine whether meters need to be unsealed.
 2. If Yes, advise the customer of the following:
@@ -254,14 +247,14 @@ If no customer record exists, proceed to Step 4.
    * MERC only: Proceed to Step 6.
    * MGU only: Proceed to Step 7.
 
-### 6. MERC only: If residential, determine if the current account has ServiceChoice.
+## 6. MERC only: If residential, determine if the current account has ServiceChoice.
 
 * If No, proceed to Step 7.
 * If Yes:
   * Issue a Turn Off for the current customer's ServiceChoice plan. Refer to the Modify or Remove Plan section of [Create, Modify, and End ServiceChoice Program](//OLEcreate,%20modify%20and%20end%20servicechoice%20program.aspx#id3).
   * Proceed to Step 7.
 
-### 7. Issue Turn On order.
+## 7. Issue Turn On order.
 
 > Note: If there is an open Backdated Turn On/Off work item, cancel the future-dated Turn On, issue the Turn On for the new party, and update the work item to indicate the Turn On was cancelled.
 
@@ -389,19 +382,19 @@ If no customer record exists, proceed to Step 4.
 
 > Note: If validation error "11477 - State of Customer's Driver's License must be provided" displays, access the customer record and ensure both Driver's License Number and Drivers License State attributes are updated.
 
-### 8. Advise customer when to expect the first bill.
+## 8. Advise customer when to expect the first bill.
 
 1. Provide the customer with the new account number.
 2. If the Wanted Date is 10 or more calendar days from the Next Rdg Date on the Services tab, the first bill is generated shortly after the Next Rdg Date.
 3. If the Wanted Date is less than 10 calendar days from the Next Rdg Date, the first bill is generated shortly after the following month's reading.
 4. Refer to [Turn On First Bill Timeframe Job-Aid](https://ole.wecenergygroup.com/sites/OLE/OLEV2/Documents/Turn%20On%20First%20Bill%20Timeframe%20Job-Aid.pdf) for more details.
 
-### 9. If a non-residential premise, verify and document nature of customer's business.
+## 9. If a non-residential premise, verify and document nature of customer's business.
 
 1. Locate the customer's new account. Refer to [Locate a Contract](//OLElocate-a-contract.aspx).
 2. Refer to [Request NAICS Information](//OLERequest-NAICS-Information.aspx).
 
-### 10. Customer has transferrable debt within the last six years.
+## 10. Customer has transferrable debt within the last six years.
 
 > Note: Debt is only transferrable for MERC customers October 1 - April 30 and MGU customers with household members 65 years and older November 1 - March 31. Outside of these times and customers, full payment is required.
 
@@ -424,7 +417,7 @@ If no customer record exists, proceed to Step 4.
      * If business customer has more than 10 accounts and is not held for debt, document that customer was advised of debt and order was not held.
 7. If debt on a finalled contract is not in bad debt status or assigned to a collection agency, [Direct Transfer a Finalled Contract Balance](//OLEDirect-Transfer-a-Finalled-Contract-Balance.aspx).
 
-### 11. Discuss available programs, if eligible.
+## 11. Discuss available programs, if eligible.
 
 * MERC ServiceChoice:
   * ServiceChoice trained: Offer Service Choice.
@@ -456,11 +449,6 @@ If no customer record exists, proceed to Step 4.
     * Defer Until Date: One business day after first bill prints
   * Instructions: Customer requested Budget Billing at time of Turn On; establish once first bill prints.
 
-### 12. If application is held, advise customer of actions needed to resolve.
+## 12. If application is held, advise customer of actions needed to resolve.
 
 * [Resolve Held Application](//OLEresolve-held-application.aspx)
-
-## Metadata
-
-* Last Reviewed: 10/10/2025 7:49 AM
-* Document ID: OLEV2-128226294-8064
