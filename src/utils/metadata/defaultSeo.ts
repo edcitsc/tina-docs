@@ -19,14 +19,18 @@ export const DEFAULT_SEO: Metadata = {
     title: settings.title,
     description: settings.description,
     siteName: settings.title,
-    images: [
-      {
-        url: settings.defaultOGImage,
-        width: 1200,
-        height: 630,
-        alt: "TinaCMS Docs",
-      },
-    ],
+    ...(settings.defaultOGImage
+      ? {
+          images: [
+            {
+              url: settings.defaultOGImage,
+              width: 1200,
+              height: 630,
+              alt: settings.title,
+            },
+          ],
+        }
+      : {}),
   },
   twitter: {
     site: settings.social.twitter,

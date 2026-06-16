@@ -17,16 +17,19 @@ export const NavbarLogo = ({ navigationDocsData }: NavbarLogoProps) => {
     setMounted(true);
   }, []);
 
-  const lightLogo = navigationDocsData[0]?.lightModeLogo;
+  const lightLogo = navigationDocsData[0]?.lightModeLogo || null;
   const darkLogo = navigationDocsData[0]?.darkModeLogo || lightLogo;
+
+  const activeLogo = resolvedTheme === "dark" ? darkLogo : lightLogo;
+  const preloadLogo = resolvedTheme === "dark" ? lightLogo : darkLogo;
 
   return (
     <Link href="/" className="flex items-center">
       <div className="relative md:w-[120px] w-[90px] h-[40px]">
-        {mounted ? (
+        {mounted && activeLogo ? (
           <>
             <Image
-              src={resolvedTheme === "dark" ? darkLogo : lightLogo}
+              src={activeLogo}
               alt="Logo"
               fill
               className="object-contain"
@@ -34,13 +37,15 @@ export const NavbarLogo = ({ navigationDocsData }: NavbarLogoProps) => {
               sizes="(max-width: 768px) 90px, 120px"
             />
             {/* Preload the other logo */}
-            <Image
-              src={resolvedTheme === "dark" ? lightLogo : darkLogo}
-              alt=""
-              fill
-              className="hidden"
-              priority
-            />
+            {preloadLogo && (
+              <Image
+                src={preloadLogo}
+                alt=""
+                fill
+                className="hidden"
+                priority
+              />
+            )}
           </>
         ) : (
           <div className="w-full h-full animate-pulse opacity-20" />
