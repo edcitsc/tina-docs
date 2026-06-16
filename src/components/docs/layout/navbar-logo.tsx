@@ -37,15 +37,7 @@ export const NavbarLogo = ({ navigationDocsData }: NavbarLogoProps) => {
               sizes="(max-width: 768px) 90px, 120px"
             />
             {/* Preload the other logo */}
-            {preloadLogo && (
-              <Image
-                src={preloadLogo}
-                alt=""
-                fill
-                className="hidden"
-                priority
-              />
-            )}
+            {preloadLogo && <Image src={preloadLogo} alt="" fill className="hidden" priority />}
           </>
         ) : (
           <div className="w-full h-full animate-pulse opacity-20" />
