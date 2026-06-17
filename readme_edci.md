@@ -58,3 +58,22 @@
 - **Content Source:** ADO repo `tina-test-content`, branch `tinadoc-selfhosting`
 - **Database:** Cosmos DB for MongoDB, collection `tinacms-tinadoc-selfhosting`
 - **Terraform:** `../tina-selfhosting-infrastructure/iac/`
+
+## Markdown Handling in TinaCMS
+
+TinaCMS uses **Plate** for its rich-text editor (which handles MDX/Markdown in the editing UI) and **Zod** for schema validation. For MDX parsing specifically, it uses **@tinacms/mdx** which relies on **remark** and **rehype** under the hood.
+
+Let me check the fork to confirm the specifics:  
+
+Searched for regex `remark|rehype|plate|zod|mdx.*parse` (`tina-github-tinacms-fork` · `packages/@tinacms/mdx/package.json`), 4 results
+
+Searched for text `plate` (`tina-github-tinacms-fork` · `packages/tinacms/package.json`), 20 results
+
+TinaCMS uses:
+
+- **Plate** (`@udecode/plate` and ~20 Plate plugins) — the rich-text editor framework for visual editing in the CMS admin UI
+- **remark** / **remark-mdx** / **remark-gfm** — for parsing MDX/Markdown on the server/build side (in the `@tinacms/mdx` package)
+
+The MDX package converts between remark AST and Plate's internal format (see `parse/plate.ts` in `@tinacms/mdx`). So **Plate** is the editor and **remark** is the Markdown parser/preprocessor.
+
+If you were specifically thinking of the schema validation layer, TinaCMS defines its own schema system in `@tinacms/graphql` that generates a GraphQL schema from your config.ts collections — it doesn't use Zod for that.
