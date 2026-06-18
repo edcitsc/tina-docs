@@ -26,4 +26,7 @@ console.log(
   `  Branch namespace: ${process.env.ADO_BRANCH || process.env.NEXT_PUBLIC_TINA_BRANCH || "main"}`,
 );
 
-execSync("npx tinacms build", { stdio: "inherit", env: process.env });
+// --no-client-build-cache: omit the filesystem response cache from the
+// generated client. Keeps tina/__generated__/.cache/ from filling with stale
+// SSR responses after every sync, and matches the Dockerfile build flags.
+execSync("npx tinacms build --no-client-build-cache", { stdio: "inherit", env: process.env });

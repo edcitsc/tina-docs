@@ -59,6 +59,10 @@
 - **Database:** Cosmos DB for MongoDB, collection `tinacms-tinadoc-selfhosting`
 - **Terraform:** `../tina-selfhosting-infrastructure/iac/`
 
+## SSR Client Cache (`--no-client-build-cache`)
+
+Every `tinacms build` invocation in this repo passes `--no-client-build-cache` (Dockerfile, `package.json` scripts, and `scripts/build-index.js`). Without it, the generated `tina/__generated__/client.ts` bakes in a `cacheDir`, and `tinacms/dist/client` writes every SSR GraphQL response to a per-key file on disk with no TTL and no invalidation hook — admin edits then never appear on the public site until the container restarts. `tinacms dev` already hardcodes the cache off, so this only matters for built images and scripted reindex runs. Leave the flag in place.
+
 ## Markdown Handling in TinaCMS
 
 TinaCMS uses **Plate** for its rich-text editor (which handles MDX/Markdown in the editing UI) and **Zod** for schema validation. For MDX parsing specifically, it uses **@tinacms/mdx** which relies on **remark** and **rehype** under the hood.

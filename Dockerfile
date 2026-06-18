@@ -64,7 +64,12 @@ ENV STANDALONE_OUTPUT=true
 # database.ts eagerly connects to MongoDB when USE_LOCAL_DB=false. Override
 # to true for the build step only. The admin SPA detects local mode via the
 # auth provider (USE_LOCAL_AUTH), not the DB flag — auth is correctly false.
-RUN TINA_PUBLIC_USE_LOCAL_DB=true pnpm exec tinacms build --skip-indexing
+#
+# --no-client-build-cache: omit the filesystem response cache from the
+# generated client. Without this, the SSR HTTP client caches GraphQL
+# responses to disk forever (no TTL, no invalidation), so admin edits do
+# not appear on the public site until the container restarts.
+RUN TINA_PUBLIC_USE_LOCAL_DB=true pnpm exec tinacms build --skip-indexing --no-client-build-cache
 
 # Build step 2: Next.js build
 # Pages are server-rendered dynamically (no CMS during build), so pagefind
